@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Crop Care &amp; Schedule - Paddy (Dhan)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#181c1a",
+                    "on-tertiary-container": "#edf1ff",
+                    "surface-container-high": "#e6e9e4",
+                    "background": "#f7faf5",
+                    "on-tertiary-fixed": "#001b3d",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#98f994",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#cbffc2",
+                    "outline-variant": "#bfcaba",
+                    "surface-container-low": "#f1f4ef",
+                    "inverse-surface": "#2d312e",
+                    "on-tertiary-fixed-variant": "#00468c",
+                    "on-primary-fixed": "#002204",
+                    "primary-fixed-dim": "#88d982",
+                    "tertiary": "#0054a7",
+                    "tertiary-fixed": "#d6e3ff",
+                    "primary": "#0d631b",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e0e3df",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e0e3df",
+                    "on-secondary-fixed": "#002204",
+                    "inverse-on-surface": "#eff2ed",
+                    "tertiary-container": "#246dc8",
+                    "inverse-primary": "#88d982",
+                    "on-secondary-fixed-variant": "#005313",
+                    "outline": "#707a6c",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#2e7d32",
+                    "secondary": "#006e1c",
+                    "tertiary-fixed-dim": "#a9c7ff",
+                    "surface-bright": "#f7faf5",
+                    "on-secondary-container": "#0c7521",
+                    "surface": "#f7faf5",
+                    "surface-tint": "#1b6d24",
+                    "secondary-fixed": "#98f994",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#7ddc7a",
+                    "on-background": "#181c1a",
+                    "on-surface-variant": "#40493d",
+                    "primary-fixed": "#a3f69c",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#005312",
+                    "surface-container": "#ecefea",
+                    "surface-dim": "#d8dbd6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-gap": "16px",
+                    "base": "4px",
+                    "grid-gutter": "12px",
+                    "container-padding": "20px",
+                    "section-margin": "32px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "label-lg": ["Be Vietnam Pro"],
+                    "title-lg": ["Be Vietnam Pro"],
+                    "display-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                    "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg": ["44px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f7faf5;
+        }
+        .timeline-line {
+            width: 2px;
+            background: repeating-linear-gradient(to bottom, #bfcaba 0%, #bfcaba 50%, transparent 50%, transparent 100%);
+            background-size: 2px 8px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface min-h-screen pb-32">
+<!-- Top AppBar -->
+<header class="bg-surface/70 backdrop-blur-xl sticky top-0 z-40 flex justify-between items-center w-full px-container-padding py-base">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile dark:text-on-surface">Namaste, Ramesh Ji</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined text-primary text-2xl">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</div>
+</div>
+</header>
+<main class="px-container-padding pt-4 space-y-stack-gap">
+<!-- Hero Section: Selected Crop & Status -->
+<section class="relative overflow-hidden rounded-xl bg-primary-container text-on-primary-container p-5 shadow-md">
+<div class="flex justify-between items-start relative z-10">
+<div>
+<p class="font-label-lg text-label-lg opacity-90">Selected Crop</p>
+<h2 class="font-display-lg text-[32px] font-extrabold leading-tight">Paddy (Dhan)</h2>
+<div class="mt-4 inline-flex items-center gap-2 bg-on-primary/20 backdrop-blur-sm px-3 py-1.5 rounded-full border border-on-primary/10">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-lg text-label-lg">Vegetative Stage (35 Days)</span>
+</div>
+</div>
+<div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-5xl">grass</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="mt-6 relative z-10">
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-label-md">Growth Progress</span>
+<span class="font-label-md text-label-md">29%</span>
+</div>
+<div class="h-3 w-full bg-on-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-on-primary rounded-full" style="width: 29%"></div>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-secondary-container/30 rounded-full blur-3xl"></div>
+</section>
+<!-- Alerts & Warnings -->
+<div class="flex items-center gap-3 bg-error-container text-on-error-container p-4 rounded-xl border border-error/20 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-error">report_problem</span>
+<div class="flex-1">
+<p class="font-label-lg text-label-lg font-bold">Stem Borer Warning</p>
+<p class="text-label-md opacity-80">Increased activity detected in Madhepura area.</p>
+</div>
+<button class="bg-error text-on-error px-3 py-1 rounded-lg font-label-md transition-transform active:scale-95">View Details</button>
+</div>
+<!-- Recommended Action Bento Card -->
+<div class="glass-card border border-outline-variant p-5 rounded-xl shadow-md flex items-center gap-4">
+<div class="bg-tertiary-container/10 p-3 rounded-full text-tertiary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-outline">Advice</p>
+<p class="font-title-lg text-title-lg text-primary">Recommended Action: Apply Urea for nitrogen boost.</p>
+</div>
+</div>
+<!-- Vertical Timeline Calendar -->
+<section class="space-y-4">
+<div class="flex justify-between items-center">
+<h3 class="font-title-lg text-title-lg text-on-surface">Activity Schedule</h3>
+<button class="text-primary font-label-lg flex items-center gap-1">
+                    See All <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<div class="relative pl-8 space-y-6">
+<!-- Vertical Line -->
+<div class="absolute left-[11px] top-2 bottom-2 timeline-line"></div>
+<!-- Timeline Item: Today (Irrigation) -->
+<div class="relative">
+<div class="absolute -left-[30px] top-1 w-6 h-6 bg-tertiary rounded-full border-4 border-surface flex items-center justify-center">
+<div class="w-2 h-2 bg-white rounded-full"></div>
+</div>
+<div class="bg-surface-container-lowest border border-tertiary/30 p-4 rounded-xl shadow-md flex justify-between items-center transition-all hover:bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="bg-tertiary/10 text-tertiary p-2 rounded-lg">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-tertiary font-bold">Irrigation today!</p>
+<p class="text-label-md text-outline">Ensure 2 inches of water level</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary">alarm</span>
+</div>
+</div>
+<!-- Timeline Item: Day 40 (Fertilizer) -->
+<div class="relative">
+<div class="absolute -left-[30px] top-1 w-6 h-6 bg-outline-variant rounded-full border-4 border-surface"></div>
+<div class="bg-surface-container-low p-4 rounded-xl flex justify-between items-center opacity-70">
+<div class="flex items-center gap-4">
+<div class="bg-on-surface-variant/10 text-on-surface-variant p-2 rounded-lg">
+<span class="material-symbols-outlined">science</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg font-bold">Fertilizer (Day 40)</p>
+<p class="text-label-md">Apply second dose of nitrogen</p>
+</div>
+</div>
+<span class="text-label-md font-bold text-outline">In 5 Days</span>
+</div>
+</div>
+<!-- Timeline Item: Harvest -->
+<div class="relative">
+<div class="absolute -left-[30px] top-1 w-6 h-6 bg-outline-variant rounded-full border-4 border-surface"></div>
+<div class="bg-surface-container-low p-4 rounded-xl flex justify-between items-center opacity-70">
+<div class="flex items-center gap-4">
+<div class="bg-on-surface-variant/10 text-on-surface-variant p-2 rounded-lg">
+<span class="material-symbols-outlined">agriculture</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg font-bold">Harvest (Estimated Day 120)</p>
+<p class="text-label-md">Projected yield: 24-26 Qt/Acre</p>
+</div>
+</div>
+<span class="text-label-md font-bold text-outline">Oct 12</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Weather Context Card (Glassmorphism) -->
+<div class="glass-card border border-outline-variant rounded-2xl overflow-hidden p-6 mt-4">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-title-lg text-title-lg">Weather Forecast</h4>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">cloudy</span>
+<span class="font-label-lg">High Humidity</span>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<div class="bg-white/50 p-2 rounded-lg text-center">
+<p class="text-label-md text-outline">Mon</p>
+<span class="material-symbols-outlined text-primary my-1">wb_sunny</span>
+<p class="font-label-lg">32°</p>
+</div>
+<div class="bg-secondary-container/40 p-2 rounded-lg text-center border border-secondary/20">
+<p class="text-label-md text-outline">Tue</p>
+<span class="material-symbols-outlined text-tertiary my-1">rainy</span>
+<p class="font-label-lg">28°</p>
+</div>
+<div class="bg-white/50 p-2 rounded-lg text-center">
+<p class="text-label-md text-outline">Wed</p>
+<span class="material-symbols-outlined text-primary my-1">partly_cloudy_day</span>
+<p class="font-label-lg">30°</p>
+</div>
+<div class="bg-white/50 p-2 rounded-lg text-center">
+<p class="text-label-md text-outline">Thu</p>
+<span class="material-symbols-outlined text-primary my-1">wb_sunny</span>
+<p class="font-label-lg">33°</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Voice Assistant -->
+<button class="fixed right-6 bottom-28 w-16 h-16 bg-gradient-to-br from-primary to-secondary text-white rounded-full shadow-2xl flex items-center justify-center z-50 group hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl group-hover:hidden" style="font-variation-settings: 'FILL' 1;">mic</span>
+<span class="hidden group-hover:block font-label-md animate-pulse">Bolien</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-base pb-6 pt-2 bg-surface-container-lowest border-t border-outline-variant shadow-md">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<!-- Weather -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">cloudy</span>
+<span class="font-label-md text-label-md">Weather</span>
+</a>
+<!-- Crops (Active) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grass</span>
+<span class="font-label-md text-label-md">Crops</span>
+</a>
+<!-- Mandi -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-label-md text-label-md">Mandi</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for activities
+        document.querySelectorAll('.timeline-line').forEach(line => {
+            line.style.height = '0%';
+            setTimeout(() => {
+                line.style.height = 'calc(100% - 16px)';
+                line.style.transition = 'height 1s ease-out';
+            }, 300);
+        });
+
+        // Toggle alert details simulation
+        const alertBtn = document.querySelector('.animate-pulse button');
+        if (alertBtn) {
+            alertBtn.addEventListener('click', () => {
+                alert('Detailed STEM BORER mitigation strategy: 1. Monitor 5-10 hills/acre. 2. Install pheromone traps. 3. Apply Cartap Hydrochloride if threshold exceeded.');
+            });
+        }
+    </script>
+</body></html>

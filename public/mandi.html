@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mandi Prices - Krishi Partner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .price-trend-up { color: #2E7D32; }
+        .price-trend-down { color: #BA1A1A; }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#181c1a",
+                        "on-tertiary-container": "#edf1ff",
+                        "surface-container-high": "#e6e9e4",
+                        "background": "#f7faf5",
+                        "on-tertiary-fixed": "#001b3d",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#98f994",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#cbffc2",
+                        "outline-variant": "#bfcaba",
+                        "surface-container-low": "#f1f4ef",
+                        "inverse-surface": "#2d312e",
+                        "on-tertiary-fixed-variant": "#00468c",
+                        "on-primary-fixed": "#002204",
+                        "primary-fixed-dim": "#88d982",
+                        "tertiary": "#0054a7",
+                        "tertiary-fixed": "#d6e3ff",
+                        "primary": "#0d631b",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e0e3df",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e0e3df",
+                        "on-secondary-fixed": "#002204",
+                        "inverse-on-surface": "#eff2ed",
+                        "tertiary-container": "#246dc8",
+                        "inverse-primary": "#88d982",
+                        "on-secondary-fixed-variant": "#005313",
+                        "outline": "#707a6c",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#2e7d32",
+                        "secondary": "#006e1c",
+                        "tertiary-fixed-dim": "#a9c7ff",
+                        "surface-bright": "#f7faf5",
+                        "on-secondary-container": "#0c7521",
+                        "surface": "#f7faf5",
+                        "surface-tint": "#1b6d24",
+                        "secondary-fixed": "#98f994",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#7ddc7a",
+                        "on-background": "#181c1a",
+                        "on-surface-variant": "#40493d",
+                        "primary-fixed": "#a3f69c",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#005312",
+                        "surface-container": "#ecefea",
+                        "surface-dim": "#d8dbd6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "base": "4px",
+                        "grid-gutter": "12px",
+                        "container-padding": "20px",
+                        "section-margin": "32px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "label-lg": ["Be Vietnam Pro"],
+                        "title-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["44px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="bg-surface/70 backdrop-blur-xl fixed top-0 w-full z-50 flex justify-between items-center px-container-padding py-base">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Namaste, Ramesh Ji</h1>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors active:scale-95 duration-100">
+<span class="material-symbols-outlined text-on-surface">notifications</span>
+</button>
+</header>
+<main class="pt-20 px-container-padding space-y-stack-gap">
+<!-- Search & Filter Area -->
+<section class="mt-4">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border-1.5 border-outline-variant bg-surface-container-lowest focus:border-primary focus:ring-0 font-body-md shadow-sm transition-all" placeholder="Search for crops..." type="text"/>
+</div>
+<div class="flex items-center justify-between mt-6">
+<div class="flex items-center gap-2 px-4 py-2 bg-primary-container/10 border border-primary/20 rounded-full text-primary font-label-lg">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span>Madhepura</span>
+</div>
+<button class="flex items-center gap-1 text-primary font-label-lg hover:underline transition-all">
+<span class="material-symbols-outlined text-[18px]">compare_arrows</span>
+                    Compare with Purnia Mandi
+                </button>
+</div>
+</section>
+<!-- Live Price Cards (Bento-ish Grid) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<!-- Paddy Card -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-[0_4px_6px_-1px_rgb(0,0,0,0.1)] border border-outline-variant/30 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-yellow-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-yellow-800">grass</span>
+</div>
+<div>
+<h3 class="font-title-lg text-on-surface">Paddy (Dhan)</h3>
+<span class="text-label-md text-on-surface-variant">Grade A • Common</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-primary bg-secondary-container px-2 py-0.5 rounded text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+                        2.4%
+                    </div>
+</div>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-display-lg font-display-lg text-on-surface">₹2,180</span>
+<span class="text-label-md text-on-surface-variant">/ Quintal</span>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4 border-t border-outline-variant/20">
+<div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">Today's High</p>
+<p class="font-title-lg text-primary">₹2,210</p>
+</div>
+<div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">Today's Low</p>
+<p class="font-title-lg text-on-surface">₹2,150</p>
+</div>
+</div>
+</div>
+<!-- Maize Card -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-[0_4px_6px_-1px_rgb(0,0,0,0.1)] border border-outline-variant/30 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-800">grain</span>
+</div>
+<div>
+<h3 class="font-title-lg text-on-surface">Maize (Makka)</h3>
+<span class="text-label-md text-on-surface-variant">Hybrid • Dry</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-error bg-error-container px-2 py-0.5 rounded text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">trending_down</span>
+                        1.2%
+                    </div>
+</div>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-display-lg font-display-lg text-on-surface">₹1,950</span>
+<span class="text-label-md text-on-surface-variant">/ Quintal</span>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4 border-t border-outline-variant/20">
+<div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">Today's High</p>
+<p class="font-title-lg text-on-surface">₹1,980</p>
+</div>
+<div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">Today's Low</p>
+<p class="font-title-lg text-error">₹1,920</p>
+</div>
+</div>
+</div>
+<!-- Wheat Card -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-[0_4px_6px_-1px_rgb(0,0,0,0.1)] border border-outline-variant/30 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-amber-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-amber-800">bakery_dining</span>
+</div>
+<div>
+<h3 class="font-title-lg text-on-surface">Wheat (Gehu)</h3>
+<span class="text-label-md text-on-surface-variant">Sharbati • Cleaned</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+                        Stable
+                    </div>
+</div>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-display-lg font-display-lg text-on-surface">₹2,420</span>
+<span class="text-label-md text-on-surface-variant">/ Quintal</span>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4 border-t border-outline-variant/20">
+<div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">Today's High</p>
+<p class="font-title-lg text-on-surface">₹2,435</p>
+</div>
+<div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">Today's Low</p>
+<p class="font-title-lg text-on-surface">₹2,410</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Trend Graph -->
+<section class="bg-surface-container-lowest p-6 rounded-xl shadow-md border border-outline-variant/30">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h2 class="font-title-lg text-on-surface">7-Day Price Trend</h2>
+<p class="text-label-md text-on-surface-variant">Paddy average across Madhepura district</p>
+</div>
+<div class="flex bg-surface-container rounded-lg p-1">
+<button class="px-3 py-1 bg-surface-container-lowest rounded shadow-sm text-label-md font-bold text-primary">Dhan</button>
+<button class="px-3 py-1 text-label-md text-on-surface-variant">Makka</button>
+<button class="px-3 py-1 text-label-md text-on-surface-variant">Gehu</button>
+</div>
+</div>
+<!-- SVG Line Graph Container -->
+<div class="relative w-full h-48 mt-8">
+<svg class="w-full h-full" viewbox="0 0 400 150">
+<!-- Grid Lines -->
+<line stroke="#E0E3DF" stroke-width="0.5" x1="0" x2="400" y1="20" y2="20"></line>
+<line stroke="#E0E3DF" stroke-width="0.5" x1="0" x2="400" y1="70" y2="70"></line>
+<line stroke="#E0E3DF" stroke-width="0.5" x1="0" x2="400" y1="120" y2="120"></line>
+<!-- Area Under Curve -->
+<path d="M0 130 L 50 110 L 100 120 L 150 90 L 200 100 L 250 60 L 300 80 L 350 40 L 400 50 V 150 H 0 Z" fill="url(#grad)" opacity="0.3"></path>
+<!-- Line Path -->
+<path d="M0 130 L 50 110 L 100 120 L 150 90 L 200 100 L 250 60 L 300 80 L 350 40 L 400 50" fill="none" stroke="#0D631B" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Data Points -->
+<circle cx="0" cy="130" fill="#0D631B" r="4"></circle>
+<circle cx="50" cy="110" fill="#0D631B" r="4"></circle>
+<circle cx="100" cy="120" fill="#0D631B" r="4"></circle>
+<circle cx="150" cy="90" fill="#0D631B" r="4"></circle>
+<circle cx="200" cy="100" fill="#0D631B" r="4"></circle>
+<circle cx="250" cy="60" fill="#0D631B" r="4"></circle>
+<circle cx="300" cy="80" fill="#0D631B" r="4"></circle>
+<circle cx="350" cy="40" fill="#0D631B" r="4"></circle>
+<circle cx="400" cy="50" fill="#0D631B" r="4"></circle>
+<defs>
+<lineargradient id="grad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#0D631B;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#F7FAF5;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- X-Axis Labels -->
+<div class="flex justify-between mt-4 text-[10px] font-bold text-on-surface-variant uppercase">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun</span>
+</div>
+</div>
+</section>
+<!-- Insights / News -->
+<section class="mt-8">
+<h2 class="font-title-lg text-on-surface mb-4">Market Insights</h2>
+<div class="bg-primary-container p-6 rounded-xl text-on-primary-container flex gap-4 items-center relative overflow-hidden">
+<div class="relative z-10 flex-1">
+<p class="font-title-lg">Paddy prices expected to rise</p>
+<p class="text-label-lg mt-1 opacity-90">Decreased arrivals in North Bihar mandis might boost rates by ₹50-70 next week.</p>
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-[48px] opacity-30">trending_up</span>
+</div>
+<!-- Subtle pattern -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+</div>
+</section>
+</main>
+<!-- Floating Voice Assistant (FAB) -->
+<button class="fixed right-6 bottom-28 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary text-white shadow-lg flex items-center justify-center z-[55] active:scale-90 transition-transform pulse-animation">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest dark:bg-inverse-surface flex justify-around items-center px-base pb-6 pt-2 border-t border-outline-variant dark:border-outline shadow-md rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">cloudy</span>
+<span class="font-label-md text-label-md">Weather</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">grass</span>
+<span class="font-label-md text-label-md">Crops</span>
+</a>
+<!-- Active Tab: Mandi -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<span class="font-label-md text-label-md font-bold">Mandi</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { box-shadow: 0 0 0 0 rgba(13, 99, 27, 0.4); }
+                70% { box-shadow: 0 0 0 20px rgba(13, 99, 27, 0); }
+                100% { box-shadow: 0 0 0 0 rgba(13, 99, 27, 0); }
+            }
+            .pulse-animation {
+                animation: pulse 2s infinite;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Simple touch feedback for cards
+        document.querySelectorAll('.bg-surface-container-lowest').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+                card.style.transition = 'transform 0.1s ease';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>
