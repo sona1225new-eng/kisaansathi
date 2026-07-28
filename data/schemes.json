@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1, "title": "PM-Kisan Samman Nidhi",
+    "description": "Direct income support of ₹6,000/year to small and marginal farmer families.",
+    "benefit": "₹6,000/year in 3 installments",
+    "eligibility": "Small & marginal farmers with less than 2 hectares land",
+    "link": "https://pmkisan.gov.in/",
+    "category": "income_support",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 2, "title": "Kisan Credit Card (KCC)",
+    "description": "Provides farmers with affordable credit for crop production and allied activities.",
+    "benefit": "Credit up to ₹3 lakh at 4% interest",
+    "eligibility": "All farmers including tenant farmers and sharecroppers",
+    "link": "https://www.myscheme.gov.in/schemes/kcc",
+    "category": "credit",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 3, "title": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "description": "Crop insurance scheme protecting farmers against losses from natural calamities.",
+    "benefit": "Full coverage for crop loss; premium 2% Kharif, 1.5% Rabi",
+    "eligibility": "All farmers growing notified crops in notified areas",
+    "link": "https://pmfby.gov.in/",
+    "category": "insurance",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 4, "title": "Soil Health Card Scheme",
+    "description": "Provides soil health cards to farmers with crop-wise nutrient recommendations.",
+    "benefit": "Free soil testing and fertilizer recommendations",
+    "eligibility": "All farmers",
+    "link": "https://soilhealth.dac.gov.in/",
+    "category": "soil",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 5, "title": "Pradhan Mantri Krishi Sinchai Yojana (PMKSY)",
+    "description": "Enhances water use efficiency and expands irrigation coverage.",
+    "benefit": "Subsidy on drip/sprinkler irrigation systems",
+    "eligibility": "All farmers with agricultural land",
+    "link": "https://pmksy.gov.in/",
+    "category": "irrigation",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 6, "title": "National Food Security Mission (NFSM)",
+    "description": "Increases production of rice, wheat, pulses and coarse cereals.",
+    "benefit": "Subsidized seeds, inputs and farm machinery",
+    "eligibility": "Farmers in identified districts",
+    "link": "https://nfsm.gov.in/",
+    "category": "production",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 7, "title": "e-NAM (National Agriculture Market)",
+    "description": "Pan-India electronic trading portal connecting agricultural produce markets.",
+    "benefit": "Better price discovery, reduced intermediaries",
+    "eligibility": "All farmers registered with local APMC",
+    "link": "https://enam.gov.in/",
+    "category": "marketing",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 8, "title": "Paramparagat Krishi Vikas Yojana (PKVY)",
+    "description": "Promotes organic farming and sustainable agriculture.",
+    "benefit": "₹50,000/ha for 3 years for organic farming",
+    "eligibility": "Groups of farmers (minimum 20) forming clusters",
+    "link": "https://pgsindia-ncof.gov.in/",
+    "category": "organic",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 9, "title": "Bihar Rajya Fasal Sahayata Yojana",
+    "description": "Bihar state crop assistance scheme for crop damage due to natural calamities.",
+    "benefit": "Up to ₹7,500/ha compensation for crop loss",
+    "eligibility": "Farmers in Bihar with crop loss above 20%",
+    "link": "https://pacsonline.bih.nic.in/fsy/",
+    "category": "insurance",
+    "applicableStates": ["Bihar"]
+  },
+  {
+    "id": 10, "title": "Bihar Agricultural Input Subsidy",
+    "description": "Input subsidy for farmers affected by floods and droughts in Bihar.",
+    "benefit": "₹13,500/ha for irrigated land, ₹6,800/ha for unirrigated",
+    "eligibility": "Flood/drought affected farmers in Bihar",
+    "link": "https://dbtagriculture.bihar.gov.in/",
+    "category": "input_subsidy",
+    "applicableStates": ["Bihar"]
+  },
+  {
+    "id": 11, "title": "Mukhyamantri Krishi Ashirwad Yojana (MKAY)",
+    "description": "Jharkhand govt provides annual income support to small and marginal farmers.",
+    "benefit": "₹5,000/acre per year up to 5 acres",
+    "eligibility": "Small & marginal farmers in Jharkhand",
+    "link": "https://mahadbtmahait.gov.in/",
+    "category": "income_support",
+    "applicableStates": ["Jharkhand"]
+  },
+  {
+    "id": 12, "title": "UP Agriculture Department Schemes",
+    "description": "Various subsidies on farm equipment, seeds and fertilizers for UP farmers.",
+    "benefit": "30-50% subsidy on farm machinery",
+    "eligibility": "Registered farmers in Uttar Pradesh",
+    "link": "https://upagriculture.com/",
+    "category": "input_subsidy",
+    "applicableStates": ["Uttar Pradesh"]
+  },
+  {
+    "id": 13, "title": "Maharashtra Shetkari Sanman Yojana",
+    "description": "One-time financial support to debt-ridden farmers in Maharashtra.",
+    "benefit": "Loan waiver up to ₹1 lakh",
+    "eligibility": "Distressed farmers in Maharashtra with outstanding loans",
+    "link": "https://mahadbtmahait.gov.in/",
+    "category": "loan_waiver",
+    "applicableStates": ["Maharashtra"]
+  },
+  {
+    "id": 14, "title": "Rythu Bandhu Scheme",
+    "description": "Telangana's investment support scheme for agriculture.",
+    "benefit": "₹10,000/acre per season",
+    "eligibility": "Land-owning farmers in Telangana",
+    "link": "https://rythubandhu.telangana.gov.in/",
+    "category": "income_support",
+    "applicableStates": ["Telangana"]
+  },
+  {
+    "id": 15, "title": "Bhavantar Bhugtan Yojana",
+    "description": "Price deficiency payment scheme for farmers in MP.",
+    "benefit": "Compensation for price below MSP",
+    "eligibility": "Farmers in Madhya Pradesh selling notified crops",
+    "link": "https://mpeuparjan.nic.in/",
+    "category": "price_support",
+    "applicableStates": ["Madhya Pradesh"]
+  },
+  {
+    "id": 16, "title": "Mukhyamantri Kisan Kalyan Yojana (MP)",
+    "description": "Additional ₹4,000/year income support on top of PM-Kisan for MP farmers.",
+    "benefit": "₹4,000/year additional income support",
+    "eligibility": "PM-Kisan beneficiaries in Madhya Pradesh",
+    "link": "https://saara.mp.gov.in/",
+    "category": "income_support",
+    "applicableStates": ["Madhya Pradesh"]
+  },
+  {
+    "id": 17, "title": "Kalia Scheme (Odisha)",
+    "description": "Krushak Assistance for Livelihood and Income Augmentation in Odisha.",
+    "benefit": "₹25,000 financial assistance over 5 seasons",
+    "eligibility": "Small farmers, landless agricultural households in Odisha",
+    "link": "https://kalia.co.in/",
+    "category": "income_support",
+    "applicableStates": ["Odisha"]
+  },
+  {
+    "id": 18, "title": "Pradhan Mantri Kisan Maandhan Yojana",
+    "description": "Pension scheme providing ₹3,000/month after age 60 for farmers.",
+    "benefit": "₹3,000/month pension after 60 years",
+    "eligibility": "Small & marginal farmers aged 18-40",
+    "link": "https://maandhan.in/",
+    "category": "pension",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 19, "title": "Agriculture Infrastructure Fund (AIF)",
+    "description": "Financing for post-harvest management infrastructure.",
+    "benefit": "Loans up to ₹2 crore at 3% interest subsidy",
+    "eligibility": "Farmers, FPOs, agri-entrepreneurs",
+    "link": "https://agriinfra.dac.gov.in/",
+    "category": "infrastructure",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 20, "title": "National Bee Keeping & Honey Mission",
+    "description": "Supports beekeeping as supplemental income for farmers.",
+    "benefit": "Subsidy on beehives and training",
+    "eligibility": "All farmers interested in beekeeping",
+    "link": "https://nbb.gov.in/",
+    "category": "allied",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 21, "title": "PM Matsya Sampada Yojana",
+    "description": "Supports fishermen and farmers engaged in aquaculture.",
+    "benefit": "Subsidy on fish farming equipment and ponds",
+    "eligibility": "Fishermen and fish farmers",
+    "link": "https://pmmsy.dof.gov.in/",
+    "category": "fishery",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 22, "title": "National Mission on Oilseeds and Oil Palm",
+    "description": "Promotes oilseed and oil palm cultivation for edible oil self-sufficiency.",
+    "benefit": "Seed subsidy, technical support, price support",
+    "eligibility": "Farmers in identified oilseed growing districts",
+    "link": "https://nmoop.gov.in/",
+    "category": "production",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 23, "title": "Sub-Mission on Agricultural Mechanization",
+    "description": "Promotes farm mechanization through subsidized farm equipment.",
+    "benefit": "40-50% subsidy on tractors, combine harvesters",
+    "eligibility": "Small and marginal farmers",
+    "link": "https://farmech.dac.gov.in/",
+    "category": "mechanization",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 24, "title": "Rashtriya Krishi Vikas Yojana (RKVY)",
+    "description": "State plan scheme for agriculture development and allied sectors.",
+    "benefit": "Grant funding for agriculture projects",
+    "eligibility": "Farmers through state government programs",
+    "link": "https://rkvy.nic.in/",
+    "category": "development",
+    "applicableStates": ["all"]
+  },
+  {
+    "id": 25, "title": "Bihar Diesel Subsidy Scheme",
+    "description": "Diesel subsidy for farmers using diesel-powered irrigation pumps.",
+    "benefit": "₹50/litre diesel subsidy for irrigation",
+    "eligibility": "Registered farmers in Bihar",
+    "link": "https://dbtagriculture.bihar.gov.in/",
+    "category": "input_subsidy",
+    "applicableStates": ["Bihar"]
+  },
+  {
+    "id": 26, "title": "West Bengal Krishak Bandhu Scheme",
+    "description": "Annual financial support and life insurance for WB farmers.",
+    "benefit": "₹10,000/year + ₹2 lakh life insurance",
+    "eligibility": "Registered farmers in West Bengal",
+    "link": "https://krishakbandhu.net/",
+    "category": "income_support",
+    "applicableStates": ["West Bengal"]
+  },
+  {
+    "id": 27, "title": "Rajasthan Mukhyamantri Krishak Sathi Yojana",
+    "description": "Accidental insurance for farmers during agricultural activities.",
+    "benefit": "₹2 lakh on death, ₹50k-1 lakh for disability",
+    "eligibility": "Farmers aged 5-70 in Rajasthan",
+    "link": "https://agriculture.rajasthan.gov.in/",
+    "category": "insurance",
+    "applicableStates": ["Rajasthan"]
+  },
+  {
+    "id": 28, "title": "Tamil Nadu Uzhavar Padhukappu Thittam",
+    "description": "TN state crop insurance scheme for paddy and other crops.",
+    "benefit": "Full crop loss compensation",
+    "eligibility": "Farmers in Tamil Nadu",
+    "link": "https://www.tn.gov.in/agriculture",
+    "category": "insurance",
+    "applicableStates": ["Tamil Nadu"]
+  },
+  {
+    "id": 29, "title": "Andhra Pradesh YSR Rythu Bharosa",
+    "description": "Investment support for agriculture and allied activities.",
+    "benefit": "₹13,500/year per farmer household",
+    "eligibility": "All farmer households in Andhra Pradesh",
+    "link": "https://ysrrythubharosa.ap.gov.in/",
+    "category": "income_support",
+    "applicableStates": ["Andhra Pradesh"]
+  },
+  {
+    "id": 30, "title": "Gujarat Mukhyamantri Kisan Sahay Yojana",
+    "description": "Crop damage compensation for farmers in Gujarat.",
+    "benefit": "₹20,000/ha for 33-60% damage; ₹25,000 for >60%",
+    "eligibility": "Farmers in Gujarat with crop damage",
+    "link": "https://ikhedut.gujarat.gov.in/",
+    "category": "insurance",
+    "applicableStates": ["Gujarat"]
+  }
+]

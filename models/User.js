@@ -7,6 +7,24 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true, minlength: 6 },
   phone: { type: String, default: '' },
   location: { type: String, default: 'Madhepura, Bihar' },
+
+  // Location enrichment
+  gpsCoords: {
+    lat: { type: Number, default: null },
+    lon: { type: Number, default: null },
+  },
+  district: { type: String, default: '' },
+  state: { type: String, default: 'Bihar' },
+  locationSource: {
+    type: String,
+    enum: ['gps', 'manual', 'default'],
+    default: 'default',
+  },
+  locationUpdatedAt: { type: Date, default: null },
+
+  // Preferences
+  preferredLanguage: { type: String, default: 'hi' },
+  preferredCrops: [{ type: String }],
   role: { type: String, enum: ['farmer', 'admin'], default: 'farmer' },
   savedCrops: [{ type: String }],
   favoriteLocations: [{ type: String }],
@@ -15,6 +33,8 @@ const userSchema = new mongoose.Schema({
     mandi: { type: Boolean, default: true },
     schemes: { type: Boolean, default: true },
     news: { type: Boolean, default: true },
+    diseaseAlerts: { type: Boolean, default: true },
+    cropCalendar: { type: Boolean, default: true },
   },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },

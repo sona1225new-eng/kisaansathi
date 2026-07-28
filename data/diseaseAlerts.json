@@ -1,0 +1,78 @@
+{
+  "Bihar": {
+    "1": [],
+    "2": [],
+    "3": [
+      { "disease": "Wheat Rust (Gehun ka Zang)", "crop": "Wheat", "severity": "High", "symptoms": "Orange/brown pustules on leaves and stems", "prevention": "Spray Mancozeb 75 WP @ 2g/litre or Propiconazole @ 1ml/litre", "organic": "Neem oil spray 5ml/litre water" }
+    ],
+    "4": [
+      { "disease": "Mango Hopper (Aam ka Tela)", "crop": "Mango", "severity": "High", "symptoms": "Yellowing and drying of mango panicles; honeydew secretion", "prevention": "Spray Imidacloprid 17.8 SL @ 0.5ml/litre at budding stage", "organic": "Kaolin clay spray to deter insects" }
+    ],
+    "5": [
+      { "disease": "Litchi Mite", "crop": "Litchi", "severity": "Medium", "symptoms": "Russet-brown skin, malformed fruits", "prevention": "Spray Dicofol 18.5 EC @ 2.5ml/litre", "organic": "Sulfur dust application" }
+    ],
+    "6": [
+      { "disease": "Paddy Blast (Jhulsa)", "crop": "Paddy", "severity": "High", "symptoms": "Diamond-shaped gray lesions with brown borders on leaves", "prevention": "Tricyclazole 75 WP @ 0.6g/litre; avoid excess nitrogen", "organic": "Silicon-based foliar spray" },
+      { "disease": "Maize Armyworm", "crop": "Maize", "severity": "Medium", "symptoms": "Ragged holes in leaves; frass in whorl", "prevention": "Emamectin Benzoate 5 SG @ 0.4g/litre spray in whorl", "organic": "Release Trichogramma parasites" }
+    ],
+    "7": [
+      { "disease": "Paddy Brown Plant Hopper (BPH)", "crop": "Paddy", "severity": "High", "symptoms": "'Hopper burn' — circular patches of yellowing and drying", "prevention": "Buprofezin 25 SC @ 1ml/litre; avoid excess nitrogen; grow resistant varieties", "organic": "Neem seed extract spray" },
+      { "disease": "Paddy Sheath Blight", "crop": "Paddy", "severity": "High", "symptoms": "Oval water-soaked lesions on sheaths turning white/grey", "prevention": "Hexaconazole 5 EC @ 1ml/litre", "organic": "Trichoderma viride application" }
+    ],
+    "8": [
+      { "disease": "Paddy Stem Borer (Tna)", "crop": "Paddy", "severity": "High", "symptoms": "Dead hearts in vegetative stage; white ears at maturity", "prevention": "Cartap Hydrochloride 4G @ 18kg/ha; pheromone traps", "organic": "Rearing and releasing Trichogramma japonicum" },
+      { "disease": "Maize Downy Mildew", "crop": "Maize", "severity": "Medium", "symptoms": "Yellowing with chlorotic streaking; white downy growth underneath", "prevention": "Metalaxyl 8% + Mancozeb 64% WP @ 2.5g/litre seed treatment", "organic": "Remove and destroy infected plants" }
+    ],
+    "9": [
+      { "disease": "Paddy Neck Blast", "crop": "Paddy", "severity": "Very High", "symptoms": "Node rotting; incomplete grain filling; white panicles", "prevention": "Tricyclazole 75 WP @ 0.6g/litre at panicle initiation", "organic": "Silicon + Phosphorus foliar spray" }
+    ],
+    "10": [
+      { "disease": "Wheat Aphids", "crop": "Wheat (early sown)", "severity": "Low-Medium", "symptoms": "Colonies on young wheat leaves; yellowing", "prevention": "Dimethoate 30 EC @ 1.5ml/litre", "organic": "Encourage natural predators (ladybird beetles)" }
+    ],
+    "11": [
+      { "disease": "Wheat Loose Smut", "crop": "Wheat", "severity": "Medium", "symptoms": "Smutted ears with black powdery spores instead of grains", "prevention": "Carboxin 37.5% + Thiram 37.5% seed treatment @ 2g/kg seed", "organic": "Hot water seed treatment (52°C for 10 min)" }
+    ],
+    "12": [
+      { "disease": "Mustard Aphid (Sarsoon ka Mahu)", "crop": "Mustard", "severity": "High", "symptoms": "Greenish-black aphid colonies on tender shoots and pods", "prevention": "Dimethoate 30 EC @ 1ml/litre; spray early morning/evening", "organic": "Neem oil 5ml/litre + yellow sticky traps" }
+    ]
+  },
+  "Uttar Pradesh": {
+    "6": [
+      { "disease": "Sugarcane Red Rot", "crop": "Sugarcane", "severity": "High", "symptoms": "Stalk wilting; red discoloration inside with white patches", "prevention": "Grow resistant varieties; treat sett with Carbendazim 50 WP 0.1%", "organic": "Remove infected stools; field sanitation" },
+      { "disease": "Paddy Blast", "crop": "Paddy", "severity": "High", "symptoms": "Diamond-shaped lesions on leaves and panicle neck", "prevention": "Tricyclazole 75 WP @ 0.6g/litre", "organic": "Silicon application; resistant varieties" }
+    ],
+    "7": [
+      { "disease": "Cotton Bollworm", "crop": "Cotton", "severity": "High", "symptoms": "Damaged bolls with frass; premature boll shedding", "prevention": "Chlorantraniliprole 18.5 SC @ 0.5ml/litre; pheromone traps", "organic": "NPV (Nuclear Polyhedrosis Virus) spray" },
+      { "disease": "Paddy Brown Plant Hopper", "crop": "Paddy", "severity": "High", "symptoms": "Hopper burn patches in field", "prevention": "Buprofezin @ 1ml/litre; drain field periodically", "organic": "Neem-based pesticides" }
+    ],
+    "11": [
+      { "disease": "Wheat Karnal Bunt", "crop": "Wheat", "severity": "Medium", "symptoms": "Partially bunted grains with fishy smell", "prevention": "Tebuconazole 2% DS seed treatment @ 1.5g/kg seed", "organic": "Use certified disease-free seed" }
+    ],
+    "12": [
+      { "disease": "Mustard White Rust", "crop": "Mustard", "severity": "Medium", "symptoms": "White blister-like pustules on leaves and pods", "prevention": "Metalaxyl 8% + Mancozeb 64% WP @ 2.5g/litre", "organic": "Avoid overhead irrigation; proper spacing" }
+    ]
+  },
+  "Punjab": {
+    "4": [
+      { "disease": "Wheat Yellow Rust", "crop": "Wheat", "severity": "Very High", "symptoms": "Yellow powdery stripes along leaf veins", "prevention": "Propiconazole 25 EC @ 1ml/litre; Tebuconazole @ 1ml/litre", "organic": "Resistant varieties; early sowing" }
+    ],
+    "7": [
+      { "disease": "Paddy Bacterial Leaf Blight", "crop": "Paddy", "severity": "High", "symptoms": "Water-soaked margins that turn yellow and die from leaf tips", "prevention": "Streptomycin sulphate + Tetracycline; avoid flood irrigation; balanced fertilization", "organic": "Remove infected tillers; avoid surplus nitrogen" }
+    ],
+    "10": [
+      { "disease": "Cotton Leaf Curl Virus", "crop": "Cotton", "severity": "Very High", "symptoms": "Upward leaf curl; enation on underside; stunted growth", "prevention": "Control whitefly vector with Imidacloprid; remove infected plants", "organic": "Yellow sticky traps; neem-based insecticides" }
+    ]
+  },
+  "Maharashtra": {
+    "6": [
+      { "disease": "Soybean Yellow Mosaic Virus", "crop": "Soybean", "severity": "High", "symptoms": "Yellow-green mosaic pattern on leaves; stunting", "prevention": "Control whitefly with Thiamethoxam 25 WG @ 0.2g/litre; use resistant varieties", "organic": "Reflective mulch to deter whiteflies; neem oil spray" },
+      { "disease": "Cotton Thrips", "crop": "Cotton", "severity": "Medium", "symptoms": "Silvery stippled appearance; leaf curling in seedlings", "prevention": "Spinosad 45 SC @ 0.3ml/litre; seed treatment with Imidacloprid", "organic": "Blue sticky traps; predatory mites" }
+    ],
+    "8": [
+      { "disease": "Soybean Pod Borer", "crop": "Soybean", "severity": "High", "symptoms": "Entry holes in pods; green caterpillar inside; pod shedding", "prevention": "Quinalphos 25 EC @ 2ml/litre at pod formation", "organic": "Bacillus thuringiensis (Bt) spray" }
+    ],
+    "10": [
+      { "disease": "Tur Wilt (Fusarium)", "crop": "Tur (Arhar)", "severity": "High", "symptoms": "Sudden wilting of plant; brown vascular discoloration", "prevention": "Seed treatment with Trichoderma viride; grow resistant varieties like BDN-2", "organic": "Soil drenching with Pseudomonas fluorescens" }
+    ]
+  }
+}

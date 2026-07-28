@@ -1,0 +1,111 @@
+{
+  "Bihar": {
+    "Kharif": {
+      "months": [6, 7, 8, 9, 10],
+      "crops": [
+        { "name": "Paddy (Dhan)", "variety": "Rajendra Sweta, Rajlaxmi", "sowing": "June-July", "harvest": "Oct-Nov", "water": "High", "notes": "Dominant crop; requires flooded conditions" },
+        { "name": "Maize (Makka)", "variety": "Ganga-5, DHM-117", "sowing": "June-July", "harvest": "Sep-Oct", "water": "Medium", "notes": "Good for upland areas" },
+        { "name": "Arhar (Tur Dal)", "variety": "Pusa-992, Bahar", "sowing": "June-July", "harvest": "Dec-Jan", "water": "Low", "notes": "Excellent nitrogen fixation" },
+        { "name": "Jute", "variety": "JRO-524, OIM-11", "sowing": "April-May", "harvest": "July-Aug", "water": "Medium", "notes": "Suited to river basin areas" },
+        { "name": "Groundnut", "variety": "ICGS-76, TG-26", "sowing": "June-July", "harvest": "Oct-Nov", "water": "Low-Medium", "notes": "Good for light soils" }
+      ]
+    },
+    "Rabi": {
+      "months": [11, 12, 1, 2, 3],
+      "crops": [
+        { "name": "Wheat (Gehu)", "variety": "HD-2967, K-307", "sowing": "Nov-Dec", "harvest": "March-April", "water": "Medium", "notes": "Most important Rabi crop in Bihar" },
+        { "name": "Mustard (Sarson)", "variety": "Pusa Tarak, Varuna", "sowing": "Oct-Nov", "harvest": "Feb-March", "water": "Low", "notes": "Major oilseed crop" },
+        { "name": "Potato (Aloo)", "variety": "Kufri Jyoti, Kufri Chandramukhi", "sowing": "Oct-Nov", "harvest": "Jan-Feb", "water": "Medium", "notes": "High demand in local mandis" },
+        { "name": "Lentil (Masoor)", "variety": "DPL-15, K-75", "sowing": "Oct-Nov", "harvest": "Feb-March", "water": "Low", "notes": "Low input crop, good protein source" },
+        { "name": "Pea (Matar)", "variety": "Arkel, Bonneville", "sowing": "Oct-Nov", "harvest": "Jan-Feb", "water": "Low", "notes": "Good vegetable cash crop" }
+      ]
+    },
+    "Zaid": {
+      "months": [3, 4, 5, 6],
+      "crops": [
+        { "name": "Mung Dal", "variety": "Pusa Vishal, Samrat", "sowing": "March-April", "harvest": "June-July", "water": "Low", "notes": "Short duration summer crop" },
+        { "name": "Sunflower", "variety": "KBSH-44, Sungold", "sowing": "Feb-March", "harvest": "May-June", "water": "Medium", "notes": "Good summer cash crop" },
+        { "name": "Vegetables (various)", "variety": "Cucurbits, Brinjal", "sowing": "March", "harvest": "May-June", "water": "Medium", "notes": "Good for kitchen gardens" }
+      ]
+    }
+  },
+  "Uttar Pradesh": {
+    "Kharif": {
+      "months": [6, 7, 8, 9, 10],
+      "crops": [
+        { "name": "Paddy (Dhan)", "variety": "Pusa Basmati-1, HKR-120", "sowing": "June-July", "harvest": "Oct-Nov", "water": "High", "notes": "Basmati variety commands premium price" },
+        { "name": "Sugarcane (Ganna)", "variety": "Co-0238, UP-05125", "sowing": "Feb-March", "harvest": "Oct-Mar", "water": "High", "notes": "Major cash crop; 12-14 month cycle" },
+        { "name": "Maize (Makka)", "variety": "Vivek-21, HQPM-1", "sowing": "June-July", "harvest": "Sep-Oct", "water": "Medium", "notes": "Growing popularity as feed crop" },
+        { "name": "Soybean", "variety": "JS-335, MAUS-81", "sowing": "June-July", "harvest": "Oct-Nov", "water": "Medium", "notes": "Suitable for Bundelkhand region" },
+        { "name": "Arhar (Tur)", "variety": "UPAS-120, Narendra Arhar-1", "sowing": "June-July", "harvest": "Nov-Jan", "water": "Low", "notes": "Important in eastern UP" }
+      ]
+    },
+    "Rabi": {
+      "months": [10, 11, 12, 1, 2, 3],
+      "crops": [
+        { "name": "Wheat (Gehu)", "variety": "GW-322, PBW-343", "sowing": "Oct-Nov", "harvest": "March-April", "water": "Medium", "notes": "UP is India's largest wheat producer" },
+        { "name": "Potato (Aloo)", "variety": "Kufri Bahar, Kufri Lauvkar", "sowing": "Oct-Nov", "harvest": "Jan-Feb", "water": "Medium", "notes": "Agra belt is famous for potato" },
+        { "name": "Mustard (Sarson)", "variety": "Pusa Agrani, Kranti", "sowing": "Sep-Oct", "harvest": "Jan-Feb", "water": "Low", "notes": "Major in western UP" },
+        { "name": "Gram (Chana)", "variety": "Pusa-1003, Avrodhi", "sowing": "Oct-Nov", "harvest": "Feb-March", "water": "Low", "notes": "Bundelkhand region speciality" },
+        { "name": "Pea (Matar)", "variety": "Bonneville, Arkel", "sowing": "Oct-Nov", "harvest": "Dec-Jan", "water": "Low", "notes": "Premium vegetable crop" }
+      ]
+    }
+  },
+  "Punjab": {
+    "Kharif": {
+      "months": [6, 7, 8, 9, 10],
+      "crops": [
+        { "name": "Paddy (Dhan)", "variety": "PR-121, PR-126", "sowing": "June", "harvest": "Oct-Nov", "water": "High", "notes": "Water intensive; alternate wetting-drying recommended" },
+        { "name": "Cotton (Kapas)", "variety": "Ajeet-199, MRC-7017", "sowing": "April-May", "harvest": "Oct-Nov", "water": "Medium", "notes": "Major cash crop in Malwa region" },
+        { "name": "Maize (Makka)", "variety": "PMH-1, Buland", "sowing": "June-July", "harvest": "Sep-Oct", "water": "Medium", "notes": "Good rotation crop with wheat" }
+      ]
+    },
+    "Rabi": {
+      "months": [10, 11, 12, 1, 2, 3, 4],
+      "crops": [
+        { "name": "Wheat (Gehu)", "variety": "PBW-502, HD-3086", "sowing": "Oct-Nov", "harvest": "April", "water": "Medium", "notes": "Punjab's primary crop; world class productivity" },
+        { "name": "Rapeseed/Mustard", "variety": "GSC-7, Hyola-PAC-401", "sowing": "Oct-Nov", "harvest": "Feb-March", "water": "Low", "notes": "Growing as wheat alternative" }
+      ]
+    }
+  },
+  "Maharashtra": {
+    "Kharif": {
+      "months": [6, 7, 8, 9, 10],
+      "crops": [
+        { "name": "Soybean", "variety": "MAUS-71, JS-335", "sowing": "June-July", "harvest": "Oct-Nov", "water": "Medium", "notes": "Dominant kharif crop in Vidarbha" },
+        { "name": "Cotton (Kapas)", "variety": "Bt Cotton, NHH-44", "sowing": "May-June", "harvest": "Nov-Jan", "water": "Low-Medium", "notes": "Major cash crop; Vidarbha region" },
+        { "name": "Jowar (Sorghum)", "variety": "CSH-16, M-35-1", "sowing": "June-July", "harvest": "Oct-Nov", "water": "Low", "notes": "Drought resistant staple" },
+        { "name": "Tur Dal (Arhar)", "variety": "ICPL-87119, PKV-Tara", "sowing": "June-July", "harvest": "Dec-Jan", "water": "Low", "notes": "Important pulse crop" }
+      ]
+    },
+    "Rabi": {
+      "months": [10, 11, 12, 1, 2, 3],
+      "crops": [
+        { "name": "Jowar (Rabi)", "variety": "Phule Vasudha, RSV-423", "sowing": "Oct-Nov", "harvest": "Feb-March", "water": "Low", "notes": "Important food crop" },
+        { "name": "Wheat", "variety": "MACS-6222, K-9107", "sowing": "Nov-Dec", "harvest": "Feb-March", "water": "Medium", "notes": "Limited to high altitude areas" },
+        { "name": "Gram (Chana)", "variety": "Vishal, JAKI-9218", "sowing": "Oct-Nov", "harvest": "Feb-March", "water": "Low", "notes": "Marathwada region" },
+        { "name": "Sunflower", "variety": "MSFH-17, Morden", "sowing": "Oct-Nov", "harvest": "Feb-March", "water": "Medium", "notes": "Good cash crop" }
+      ]
+    }
+  },
+  "Rajasthan": {
+    "Kharif": {
+      "months": [6, 7, 8, 9, 10],
+      "crops": [
+        { "name": "Bajra (Pearl Millet)", "variety": "HHB-67, Pusa-322", "sowing": "June-July", "harvest": "Sep-Oct", "water": "Very Low", "notes": "Drought tolerant staple of Rajasthan" },
+        { "name": "Jowar", "variety": "CSH-16, SPV-462", "sowing": "June-July", "harvest": "Oct-Nov", "water": "Low", "notes": "Suitable for low rainfall areas" },
+        { "name": "Groundnut", "variety": "TG-26, Kadiri-5", "sowing": "June-July", "harvest": "Oct-Nov", "water": "Low", "notes": "Good for sandy loam soils" },
+        { "name": "Cluster Bean (Guar)", "variety": "RGC-1003, HG-2-20", "sowing": "June-July", "harvest": "Sep-Oct", "water": "Very Low", "notes": "Industrial crop; good demand" }
+      ]
+    },
+    "Rabi": {
+      "months": [10, 11, 12, 1, 2, 3],
+      "crops": [
+        { "name": "Mustard (Sarson)", "variety": "Pusa Mahak, RH-749", "sowing": "Oct-Nov", "harvest": "Feb-March", "water": "Low", "notes": "Rajasthan is India's largest mustard producer" },
+        { "name": "Wheat (Gehu)", "variety": "HD-2781, WH-542", "sowing": "Nov", "harvest": "March-April", "water": "Medium", "notes": "Major in irrigated areas" },
+        { "name": "Gram (Chana)", "variety": "GNG-1581, RSG-963", "sowing": "Oct-Nov", "harvest": "Feb-March", "water": "Low", "notes": "Important pulse crop" },
+        { "name": "Cumin (Jeera)", "variety": "RZ-209, RZ-19", "sowing": "Nov-Dec", "harvest": "Feb-March", "water": "Low", "notes": "Rajasthan produces 70% of India's cumin" }
+      ]
+    }
+  }
+}

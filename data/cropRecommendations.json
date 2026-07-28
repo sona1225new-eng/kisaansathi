@@ -1,0 +1,101 @@
+{
+  "Bihar": {
+    "Kharif": ["Paddy", "Maize", "Arhar (Tur)", "Groundnut", "Sesame", "Jute"],
+    "Rabi": ["Wheat", "Mustard", "Potato", "Lentil (Masoor)", "Pea", "Chickpea"],
+    "Zaid": ["Mung Dal", "Sunflower", "Watermelon", "Cucumber", "Lady Finger"],
+    "tips": {
+      "soil": "Alluvial soil — excellent for paddy, wheat and vegetables",
+      "water": "High water table in most areas; canal irrigation available",
+      "market": "Key mandis: Patna, Muzaffarpur, Katihar, Purnia, Darbhanga",
+      "focus": "Focus on paddy-wheat rotation; diversify with maize and vegetables for better income"
+    }
+  },
+  "Uttar Pradesh": {
+    "Kharif": ["Paddy (Basmati)", "Sugarcane", "Maize", "Soybean", "Cotton", "Arhar"],
+    "Rabi": ["Wheat", "Mustard", "Potato", "Chickpea", "Pea", "Barley"],
+    "Zaid": ["Mung Dal", "Urad Dal", "Vegetables", "Fodder crops"],
+    "tips": {
+      "soil": "Indo-Gangetic plains — highly fertile; suited for all crops",
+      "water": "Large canal network; ground water available",
+      "market": "Key mandis: Lucknow, Agra, Varanasi, Kanpur, Allahabad",
+      "focus": "Wheat-rice cropping system dominant; diversify into pulses for soil health"
+    }
+  },
+  "Punjab": {
+    "Kharif": ["Paddy", "Cotton", "Maize", "Bajra", "Moong"],
+    "Rabi": ["Wheat", "Barley", "Mustard", "Chickpea"],
+    "Zaid": ["Sunflower", "Vegetables", "Fodder"],
+    "tips": {
+      "soil": "Sandy loam to loam soils; highly productive",
+      "water": "One of most irrigated states; canal + tubewell irrigation",
+      "market": "Key mandis: Amritsar, Ludhiana, Patiala, Bathinda",
+      "focus": "Diversify from paddy-wheat to reduce water use; explore maize, oilseeds"
+    }
+  },
+  "Maharashtra": {
+    "Kharif": ["Cotton", "Soybean", "Tur (Arhar)", "Jowar", "Bajra", "Groundnut"],
+    "Rabi": ["Wheat", "Gram (Chana)", "Jowar", "Sunflower", "Safflower"],
+    "Zaid": ["Vegetables", "Onion", "Grapes", "Pomegranate"],
+    "tips": {
+      "soil": "Black cotton soil (Regur) — excellent for cotton and soybean",
+      "water": "Rainfed farming dominant; irrigation limited to river command areas",
+      "market": "Key mandis: Pune, Nashik, Nagpur, Aurangabad, Solapur",
+      "focus": "Intercropping soybean with tur gives good returns; adopt micro-irrigation"
+    }
+  },
+  "Rajasthan": {
+    "Kharif": ["Bajra", "Jowar", "Cluster Bean (Guar)", "Groundnut", "Cotton", "Sesame"],
+    "Rabi": ["Mustard", "Wheat", "Chickpea", "Cumin", "Barley", "Coriander"],
+    "Zaid": ["Watermelon", "Muskmelon", "Moong"],
+    "tips": {
+      "soil": "Sandy and sandy loam soils; drought-prone",
+      "water": "Water scarce; drip/sprinkler irrigation essential; PMKSY benefits available",
+      "market": "Key mandis: Jaipur, Jodhpur, Bikaner, Kota, Ajmer",
+      "focus": "Mustard and cumin are high-value crops; adopt drought tolerant varieties"
+    }
+  },
+  "Madhya Pradesh": {
+    "Kharif": ["Soybean", "Maize", "Cotton", "Tur", "Urad", "Rice"],
+    "Rabi": ["Wheat", "Gram (Chana)", "Mustard", "Lentil", "Pea"],
+    "Zaid": ["Moong", "Urad", "Vegetables"],
+    "tips": {
+      "soil": "Black and red soils; medium to deep",
+      "water": "Narmada-based canal irrigation in some areas; rainfed in others",
+      "market": "Key mandis: Indore, Bhopal, Jabalpur, Gwalior, Rewa",
+      "focus": "Soybean-wheat rotation is dominant; gram cultivation can be expanded"
+    }
+  },
+  "West Bengal": {
+    "Kharif": ["Paddy (Aman)", "Jute", "Vegetables", "Maize"],
+    "Rabi": ["Wheat", "Mustard", "Potato", "Vegetables", "Pulses"],
+    "Zaid": ["Paddy (Boro)", "Vegetables", "Moong"],
+    "tips": {
+      "soil": "Alluvial delta soils — highly fertile; suited for paddy",
+      "water": "High rainfall; flood-prone in north; irrigation needed in summer",
+      "market": "Key mandis: Kolkata, Siliguri, Asansol, Malda",
+      "focus": "Triple cropping possible; vegetables and flowers are lucrative in peri-urban areas"
+    }
+  },
+  "Andhra Pradesh": {
+    "Kharif": ["Paddy", "Cotton", "Groundnut", "Maize", "Chilies"],
+    "Rabi": ["Paddy", "Groundnut", "Sunflower", "Chilies", "Jowar"],
+    "Zaid": ["Vegetables", "Pulses", "Watermelon"],
+    "tips": {
+      "soil": "Alluvial, red and black soils; varies by region",
+      "water": "Major irrigation from Krishna and Godavari rivers",
+      "market": "Key mandis: Vijayawada, Kurnool, Tirupati, Guntur",
+      "focus": "Chilies and aquaculture are high-value specialities; invest in cold storage"
+    }
+  },
+  "Karnataka": {
+    "Kharif": ["Paddy", "Sorghum (Jowar)", "Maize", "Cotton", "Groundnut", "Sugarcane"],
+    "Rabi": ["Wheat", "Chickpea", "Safflower", "Linseed", "Sunflower"],
+    "Zaid": ["Vegetables", "Pulses"],
+    "tips": {
+      "soil": "Red soils; laterite and black cotton soils in different zones",
+      "water": "Cauvery river irrigation; semi-arid in north; good rainfall in coastal areas",
+      "market": "Key mandis: Bangalore, Hubli, Mysore, Mangalore",
+      "focus": "Coffee and silk are unique crops; maize-groundnut rotation profitable"
+    }
+  }
+}

@@ -1,7 +1,16 @@
 import { useEffect, useState } from 'react';
-import { dashboardService } from '../api/services';
+import { dashboardService, locationService } from '../api/services';
 
-export function useDashboardData(city = 'Madhepura') {
+/**
+ * useDashboardData
+ *
+ * Accepts either:
+ *   - city (string) — legacy mode
+ *   - location object: { lat, lon, city, state, district, source }
+ *
+ * Returns the full enriched data set from the location API.
+ */
+export function useDashboardData(locationOrCity = 'Madhepura') {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -11,9 +20,26 @@ export function useDashboardData(city = 'Madhepura') {
     const load = async () => {
       try {
         setLoading(true);
-        const response = await dashboardService.getOverview(city);
-        if (mounted) {
-          setData(response.data.data);
+        let response;
+
+        if (typeof locationOrCity === 'string') {
+          // Legacy: city string → use old dashboard overview endpoint
+          response = await dashboardService.getOverview(locationOrCity);
+          if (mounted) setData(response.data.data);
+        } else if (locationOrCity && typeof locationOrCity === 'object') {
+          // New: location object → use location/full endpoint
+          const params = {};
+          if (locationOrCity.lat && locationOrCity.lon) {
+            params.lat = locationOrCity.lat;
+            params.lon = locationOrCity.lon;
+          } else if (locationOrCity.city) {
+            params.city = locationOrCity.city;
+          }
+          if (locationOrCity.state) params.state = locationOrCity.state;
+          if (locationOrCity.district) params.district = locationOrCity.district;
+
+          response = await locationService.getFullLocationData(params);
+          if (mounted) setData(response.data.data);
         }
       } catch (err) {
         if (mounted) {
@@ -25,10 +51,13 @@ export function useDashboardData(city = 'Madhepura') {
     };
 
     load();
-    return () => {
-      mounted = false;
-    };
-  }, [city]);
+    return () => { mounted = false; };
+  }, [
+    typeof locationOrCity === 'string' ? locationOrCity : locationOrCity?.lat,
+    typeof locationOrCity === 'string' ? undefined : locationOrCity?.lon,
+    typeof locationOrCity === 'string' ? undefined : locationOrCity?.city,
+    typeof locationOrCity === 'string' ? undefined : locationOrCity?.source,
+  ]);
 
   return { data, loading, error };
 }
