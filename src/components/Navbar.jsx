@@ -1,9 +1,14 @@
 import React from 'react'
 import { FiSearch, FiBell, FiMapPin, FiEdit3 } from 'react-icons/fi'
 import { useLocationContext } from '../context/LocationContext'
+import { useAuthContext } from '../context/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 export default function Navbar({ user }){
   const { location, openLocationModal } = useLocationContext()
+  const { logout } = useAuthContext()
+  const navigate = useNavigate()
+  const handleLogout = async () => { await logout(); navigate('/', { replace: true }); }
 
   const displayLocation = location.city
     ? (location.state ? `${location.city}, ${location.state}` : location.city)
@@ -39,6 +44,7 @@ export default function Navbar({ user }){
           <div className="text-sm font-semibold text-gray-800">{user.name || 'Ramesh Ji'}</div>
           <div className="text-xs text-gray-500 truncate max-w-[120px]">{displayLocation}</div>
         </div>
+        <button onClick={handleLogout} className="text-xs font-semibold text-gray-500 hover:text-red-600">Logout</button>
       </div>
     </header>
   )
