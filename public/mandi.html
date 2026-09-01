@@ -124,12 +124,27 @@
 <header class="bg-surface/70 backdrop-blur-xl fixed top-0 w-full z-50 flex justify-between items-center px-container-padding py-base">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-primary">location_on</span>
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Namaste, Ramesh Ji</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Namaste</h1>
 </div>
 <button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors active:scale-95 duration-100">
 <span class="material-symbols-outlined text-on-surface">notifications</span>
 </button>
 </header>
+<script>
+  (() => {
+    try {
+      const raw = localStorage.getItem('ks_user') || sessionStorage.getItem('ks_user');
+      if (!raw) return;
+      const user = JSON.parse(raw);
+      const name = user && user.name ? String(user.name).trim() : '';
+      if (!name) return;
+      const headerTitle = document.querySelector('header h1');
+      if (headerTitle && headerTitle.textContent.includes('Namaste,')) {
+        headerTitle.textContent = `Namaste, ${name}`;
+      }
+    } catch (e) {}
+  })();
+</script>
 <main class="pt-20 px-container-padding space-y-stack-gap">
 <!-- Search & Filter Area -->
 <section class="mt-4">

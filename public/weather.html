@@ -137,7 +137,7 @@
 <div class="flex justify-between items-center w-full px-container-padding py-base">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary">location_on</span>
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile dark:text-on-surface">Namaste, Ramesh Ji</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile dark:text-on-surface">Namaste</h1>
 </div>
 <div class="flex items-center gap-4">
 <button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors active:scale-95 duration-100">
@@ -146,6 +146,21 @@
 </div>
 </div>
 </header>
+<script>
+  (() => {
+    try {
+      const raw = localStorage.getItem('ks_user') || sessionStorage.getItem('ks_user');
+      if (!raw) return;
+      const user = JSON.parse(raw);
+      const name = user && user.name ? String(user.name).trim() : '';
+      if (!name) return;
+      const headerTitle = document.querySelector('header h1');
+      if (headerTitle && headerTitle.textContent.includes('Namaste,')) {
+        headerTitle.textContent = `Namaste, ${name}`;
+      }
+    } catch (e) {}
+  })();
+</script>
 <main class="px-container-padding pt-4 space-y-6">
 <!-- Alert Section -->
 <section class="animate-pulse-soft">

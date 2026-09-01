@@ -11,11 +11,13 @@ import ApiStatus from './components/ApiStatus'
 import LocationPermissionBanner from './components/LocationPermissionBanner'
 import LocationModal from './components/LocationModal'
 import { useLocationContext } from './context/LocationContext'
+import { useAuthContext } from './context/AuthContext'
 import { useLocationData } from './hooks/useLocationData'
 import { useUserProfile } from './hooks/useUserProfile'
 import { user, quickActions, links } from './data/dummy'
 
 export default function App(){
+  const { user: authUser } = useAuthContext()
   const { profile, loading: profileLoading, error: profileError, success: profileSuccess } = useUserProfile()
   const { location, openLocationModal } = useLocationContext()
 
@@ -31,7 +33,7 @@ export default function App(){
   const dashboardWeather = locationWeather || { temp: 28, desc: 'Partly Cloudy', feels: 31, humidity: 65, wind: '12 km/h', chance: '20%' }
   const dashboardMandi = locationMandi?.length ? locationMandi : []
   const dashboardNews = locationNews?.length ? locationNews : []
-  const userProfile = profile || user
+  const userProfile = profile || authUser || user
 
   const isLoading = profileLoading || locationLoading
   const activeError = profileError || locationDataError
@@ -65,7 +67,7 @@ export default function App(){
                 <div>
                   <div className="flex items-center justify-between">
                     <div>
-                      <h2 className="text-2xl font-bold text-gray-800">👋 Namaste, {userProfile.name || 'Ramesh Ji'}</h2>
+                      <h2 className="text-2xl font-bold text-gray-800">👋 Namaste, {userProfile.name}</h2>
                       <div
                         onClick={openLocationModal}
                         className="text-xs text-green-700 font-semibold cursor-pointer hover:underline flex items-center gap-1 mt-0.5"

@@ -375,7 +375,7 @@
 <img class="w-full h-full object-cover" data-alt="A portrait of a smiling middle-aged Indian farmer wearing a traditional white kurta and a green turban, set against a blurred background of a lush green agricultural field at sunset. The lighting is warm and cinematic, reflecting the premium agricultural partner brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_2O2DA7JniwBwqL5vokJnto2jrpWXvnECO3WShCXQdkmWnbDixCgbkAUBu0bnwmG3vwfpqkk_6DQ-iQssMz1uueHk-A222fGDTdXpiqo1_7IHPv4QjXH2XvlgH6QGUDbZteME9_JN2Aj-LU_Q5J9i4y6wKU_TVyTU3CooMgP93TumJrr_jUKDZE8ZCj3l31StcxkVkzPIERDkht58M4fMoBWGc06pbJVRUJplxHXKWDtl3xVeIEn0fS8kp8dXG1vuXJL5PIRzGRQ"/>
 </div>
 <div>
-<h3 class="font-title-lg text-on-surface">Ramesh Ji</h3>
+<h3 class="font-title-lg text-on-surface">Farmer</h3>
 <p class="text-sm text-on-surface-variant">Madhepura, Bihar</p>
 </div>
 </div>
@@ -399,6 +399,21 @@
 </nav>
 </div>
 </div>
+<script>
+  (() => {
+    try {
+      const raw = localStorage.getItem('ks_user') || sessionStorage.getItem('ks_user');
+      if (!raw) return;
+      const user = JSON.parse(raw);
+      const name = user && user.name ? String(user.name).trim() : '';
+      if (!name) return;
+      const sideName = document.querySelector('#sideNav h3');
+      if (sideName && sideName.textContent.trim() === 'Farmer') {
+        sideName.textContent = name;
+      }
+    } catch (e) {}
+  })();
+</script>
 <!-- Bottom Navigation Bar -->
 <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-base pb-6 pt-2 bg-surface-container-lowest border-t border-outline-variant shadow-md">
 <a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all" href="#">

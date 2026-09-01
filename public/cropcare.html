@@ -130,7 +130,7 @@
 <header class="bg-surface/70 backdrop-blur-xl sticky top-0 z-40 flex justify-between items-center w-full px-container-padding py-base">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-primary text-2xl">location_on</span>
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile dark:text-on-surface">Namaste, Ramesh Ji</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile dark:text-on-surface">Namaste</h1>
 </div>
 <div class="flex items-center gap-4">
 <div class="relative">
@@ -139,6 +139,21 @@
 </div>
 </div>
 </header>
+<script>
+  (() => {
+    try {
+      const raw = localStorage.getItem('ks_user') || sessionStorage.getItem('ks_user');
+      if (!raw) return;
+      const user = JSON.parse(raw);
+      const name = user && user.name ? String(user.name).trim() : '';
+      if (!name) return;
+      const headerTitle = document.querySelector('header h1');
+      if (headerTitle && headerTitle.textContent.includes('Namaste,')) {
+        headerTitle.textContent = `Namaste, ${name}`;
+      }
+    } catch (e) {}
+  })();
+</script>
 <main class="px-container-padding pt-4 space-y-stack-gap">
 <!-- Hero Section: Selected Crop & Status -->
 <section class="relative overflow-hidden rounded-xl bg-primary-container text-on-primary-container p-5 shadow-md">

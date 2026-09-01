@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community Hub | Kisaan Saathi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#2e7d32",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#cbffc2",
+                        "surface-container": "#ecefea",
+                        "on-surface-variant": "#40493d",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#181c1a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e0e3df",
+                        "secondary": "#006e1c",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e6e9e4",
+                        "on-secondary-fixed": "#002204",
+                        "inverse-on-surface": "#eff2ed",
+                        "tertiary-container": "#246dc8",
+                        "secondary-fixed": "#98f994",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#005313",
+                        "primary-fixed": "#a3f69c",
+                        "on-primary-fixed-variant": "#005312",
+                        "surface-bright": "#f7faf5",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#002204",
+                        "inverse-surface": "#2d312e",
+                        "surface-dim": "#d8dbd6",
+                        "secondary-fixed-dim": "#7ddc7a",
+                        "surface-variant": "#e0e3df",
+                        "on-tertiary-container": "#edf1ff",
+                        "tertiary-fixed": "#d6e3ff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f1f4ef",
+                        "outline-variant": "#bfcaba",
+                        "primary": "#0d631b",
+                        "inverse-primary": "#88d982",
+                        "tertiary-fixed-dim": "#a9c7ff",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#1b6d24",
+                        "outline": "#707a6c",
+                        "surface": "#f7faf5",
+                        "primary-fixed-dim": "#88d982",
+                        "on-surface": "#181c1a",
+                        "secondary-container": "#98f994",
+                        "tertiary": "#0054a7",
+                        "on-secondary-container": "#0c7521",
+                        "background": "#f7faf5",
+                        "on-tertiary-fixed-variant": "#00468c",
+                        "on-tertiary-fixed": "#001b3d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding": "20px",
+                        "section-margin": "32px",
+                        "base": "4px",
+                        "grid-gutter": "12px",
+                        "stack-gap": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "label-lg": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "title-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["44px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f7faf5;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            color: #181c1a;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .voice-pulse {
+            animation: pulse-animation 2s infinite;
+        }
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0px rgba(46, 125, 50, 0.4); }
+            100% { box-shadow: 0 0 0 20px rgba(46, 125, 50, 0); }
+        }
+    </style>
+</head>
+<body class="pb-24 overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md shadow-sm flex items-center px-container-padding h-16">
+<div class="flex items-center gap-4 w-full">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-high transition-colors active:scale-95 duration-100" onclick="window.history.back()">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-title-lg text-title-lg text-primary flex-grow">Community Hub</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-high transition-colors active:scale-95 duration-100">
+<span class="material-symbols-outlined text-primary">search</span>
+</button>
+</div>
+</header>
+<main class="mt-16 max-w-5xl mx-auto px-container-padding space-y-section-margin pt-4">
+<!-- Hero Section -->
+<section class="relative rounded-3xl overflow-hidden shadow-md bg-white">
+<div class="md:grid md:grid-cols-2 flex flex-col items-center">
+<div class="p-8 space-y-4 md:order-1 order-2">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary">Namaste, Kisaan Samuday</h2>
+<p class="font-body-md text-on-surface-variant">Connect with fellow farmers in Madhepura, share your experiences, and grow together.</p>
+<button class="bg-primary text-white font-label-lg px-8 py-4 rounded-full shadow-lg hover:brightness-110 active:scale-95 transition-all w-full md:w-auto">
+                        Join the Conversation
+                    </button>
+</div>
+<div class="h-64 md:h-full w-full md:order-2 order-1 overflow-hidden">
+<img alt="Indian farmers interacting in a lush green field" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKXCXqVXV9k4zBf-cUVuT2cIOKLpefcKKB4j-JkQk4AuqS3E4PhiNmhd-fXyFmmsmugo7hyEDopl-SCj1weXkypSbwS1F60bqae35C6CJbccvlkC2A63qEt49u7X9Fv5r4YtfjIJifFLAGO9jnTAiFgi3rmd5gIYiMpimb3t_WeWJwxk6QmuXfyXfQDbwI5ox3hPk5YNyAv61iz57p9Ax1BD6ZdZdSY3KgwoV2dxVdkurweSWzuUV7J6s5pn27OvsjHPQYxDQjn9I"/>
+</div>
+</div>
+</section>
+<!-- Community Stats -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<div class="bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant flex items-center gap-4">
+<div class="bg-primary-fixed w-12 h-12 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">groups</span>
+</div>
+<div>
+<p class="font-headline-lg-mobile text-primary">5,000+</p>
+<p class="font-label-md text-on-surface-variant">Farmers</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant flex items-center gap-4">
+<div class="bg-secondary-fixed w-12 h-12 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">verified</span>
+</div>
+<div>
+<p class="font-headline-lg-mobile text-primary">1,200+</p>
+<p class="font-label-md text-on-surface-variant">Expert Solutions</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant flex items-center gap-4">
+<div class="bg-tertiary-fixed w-12 h-12 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">support_agent</span>
+</div>
+<div>
+<p class="font-headline-lg-mobile text-primary">24/7</p>
+<p class="font-label-md text-on-surface-variant">Support</p>
+</div>
+</div>
+</section>
+<!-- Ask the Community -->
+<section class="bg-white p-6 rounded-2xl shadow-md space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a middle-aged Indian farmer named Ramesh wearing a white kurta and a colorful turban, smiling kindly at the camera. The background is a soft, out-of-focus rural setting. The lighting is warm and natural, reflecting the reliable partner brand persona." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCijPHydeO4InA3CKwmb0gUj9nrPkUMx076rmVuUGIiNH_WEBdzSLn0LappSvVH8fN81r7znxLx6VH9Csm9lhMZlMdFoiQFXnSNjKhuQ8KaMSR7KMbet9Z-G7JyH8vdBLRNRdaZdDHJ5ukQoPossbtgJQXNsksdvAQGNQMSPqG64ABAcCMi3th2DomP9MvyttAhI0h-18NKSYKYxE5gYTAXuRK0wZqBus1ffvRmVdw-cf-d3mYONCiV7gy-c7CsVHSrW3_e8JTt9vc"/>
+</div>
+<div class="flex-grow">
+<button class="w-full text-left bg-surface-container-low px-4 py-3 rounded-xl font-body-md text-on-surface-variant hover:bg-surface-container-high transition-colors">
+                        What's on your mind today, Ramesh Ji?
+                    </button>
+</div>
+</div>
+<div class="flex justify-between items-center pt-2 border-t border-outline-variant">
+<div class="flex gap-4">
+<button class="flex items-center gap-2 text-primary font-label-lg px-3 py-2 rounded-lg hover:bg-primary-fixed/30 transition-colors">
+<span class="material-symbols-outlined">image</span> Photo
+                    </button>
+<button class="flex items-center gap-2 text-primary font-label-lg px-3 py-2 rounded-lg hover:bg-primary-fixed/30 transition-colors">
+<span class="material-symbols-outlined" data-weight="fill">mic</span> Voice
+                    </button>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-full font-label-lg shadow-sm">Post</button>
+</div>
+</section>
+<!-- Main Content Area (Posts & Expert Advice) -->
+<div class="lg:grid lg:grid-cols-3 lg:gap-grid-gutter space-y-section-margin lg:space-y-0">
+<!-- Post Feed -->
+<div class="lg:col-span-2 space-y-stack-gap">
+<h3 class="font-title-lg text-title-lg text-on-surface px-1">Community Feed</h3>
+<!-- Post 1 -->
+<article class="bg-white rounded-2xl shadow-md p-5 space-y-4 border border-surface-container-highest">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary">SK</div>
+<div>
+<h4 class="font-label-lg">Sanjeev Kumar</h4>
+<p class="text-[12px] text-on-surface-variant">Singheshwar • 2 hours ago</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-outline">more_horiz</button>
+</div>
+<p class="font-body-md text-on-surface">Best variety of wheat for late sowing in Kosi region?</p>
+<div class="bg-primary/5 rounded-xl p-4 border border-primary/10">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Expert Badge</span>
+<p class="font-label-md text-primary">Dr. Verma (KVK Scientist)</p>
+</div>
+<p class="font-body-md text-on-surface-variant italic leading-relaxed">
+                            "For late sowing in Kosi, consider PBW-373 or HD-2967. Ensure proper moisture management during the grain filling stage."
+                        </p>
+</div>
+<div class="flex items-center gap-6 pt-2">
+<button class="flex items-center gap-1.5 text-on-surface-variant font-label-md hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span> 24 Likes
+                        </button>
+<button class="flex items-center gap-1.5 text-on-surface-variant font-label-md hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span> 8 Comments
+                        </button>
+<button class="flex items-center gap-1.5 text-on-surface-variant font-label-md hover:text-primary transition-colors ml-auto">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</article>
+<!-- Post 2 -->
+<article class="bg-white rounded-2xl shadow-md overflow-hidden border border-surface-container-highest">
+<div class="p-5 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-secondary">AM</div>
+<div>
+<h4 class="font-label-lg">Anjali Mahto</h4>
+<p class="text-[12px] text-on-surface-variant">Madhepura • 5 hours ago</p>
+</div>
+</div>
+<div class="h-64 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A vibrant, close-up photograph of a lush green paddy field in Madhepura during the harvest season. The rice stalks are heavy with golden grain, shimmering under the bright afternoon sun. The image evokes a sense of abundance and success, captured in a crisp, documentary style with high-density detail and natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKqyfDpaXW4p7PvO5ExRBlXRSl6jw6ct9-_un5GyEs3R03GRUKsFtW4u3Qu4vALFuczmqi-fAruMFO2imxUI08GRD8kORrxX4E15vgQ06mm-0uJSW2oEeeQFHerdnjffa_OYIBMOCyCd9BkhXpvhdl_rm6sEWYX3gQQwlp4Ax8LiY4Cqa8KYVPBO2X9yeDg3BaDahQ6Yj4wh0PbnINjlwntThnfp4WnVcYXTlHPxMEOk-PkPwNu0Xe7ao2WfuyZCRomX8MMa9sG_Y"/>
+</div>
+<div class="p-5 space-y-4">
+<p class="font-body-md text-on-surface">Successful organic harvest this season! Minimal fertilizer used, great yield. Happy to share my techniques.</p>
+<div class="flex items-center gap-6 pt-2 border-t border-outline-variant">
+<button class="flex items-center gap-1.5 text-on-surface-variant font-label-md hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span> 142
+                            </button>
+<button class="flex items-center gap-1.5 text-on-surface-variant font-label-md hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span> 31
+                            </button>
+<button class="flex items-center gap-1.5 text-on-surface-variant font-label-md hover:text-primary transition-colors ml-auto">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Sidebar: Expert Tips & Guidelines -->
+<div class="space-y-stack-gap">
+<section class="bg-white rounded-2xl shadow-md p-5 space-y-4 border border-surface-container-highest">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">lightbulb</span>
+<h3 class="font-title-lg text-[20px]">Advice from KVK Scientists</h3>
+</div>
+<div class="space-y-3">
+<div class="p-3 bg-surface-container-low rounded-xl border-l-4 border-primary">
+<p class="font-label-lg text-primary mb-1">Pest Alert: Brown Planthopper</p>
+<p class="font-body-md text-on-surface-variant text-[14px]">Keep water levels low in paddy fields to discourage breeding. Use neem oil spray as a preventive measure.</p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl border-l-4 border-tertiary">
+<p class="font-label-lg text-tertiary mb-1">Soil Health Tip</p>
+<p class="font-body-md text-on-surface-variant text-[14px]">Test your soil before the next sowing cycle. Free testing available at District HQ next Monday.</p>
+</div>
+</div>
+<button class="w-full text-center text-primary font-label-lg py-2 hover:bg-primary/5 rounded-lg transition-all">View All Tips</button>
+</section>
+<section class="bg-white rounded-2xl shadow-md p-5 space-y-3 border border-surface-container-highest">
+<h3 class="font-label-lg text-on-surface-variant uppercase tracking-wider text-[11px]">Community Guidelines</h3>
+<div class="space-y-2">
+<details class="group">
+<summary class="flex items-center justify-between font-label-lg cursor-pointer list-none">
+                                Respectful Conduct
+                                <span class="material-symbols-outlined text-[20px] transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-on-surface-variant text-[13px] pt-2">Treat every member with respect. No offensive language or harassment is permitted.</p>
+</details>
+<hr class="border-outline-variant"/>
+<details class="group">
+<summary class="flex items-center justify-between font-label-lg cursor-pointer list-none">
+                                Fact-Based Info
+                                <span class="material-symbols-outlined text-[20px] transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-on-surface-variant text-[13px] pt-2">Only share verified agricultural advice. Misleading information will be removed.</p>
+</details>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-2xl z-50 flex items-center justify-center voice-pulse hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[28px]" data-weight="fill">mic</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] flex justify-around items-center h-20 px-4 pb-safe">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">cloud</span>
+<span class="font-label-md text-label-md mt-1">Weather</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">agriculture</span>
+<span class="font-label-md text-label-md mt-1">Crops</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary after:content-[''] after:w-1 after:h-1 after:bg-primary after:rounded-full after:mt-1 active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-weight="fill">groups</span>
+<span class="font-label-md text-label-md mt-1 font-bold">Community</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-label-md text-label-md mt-1">Mandi</span>
+</button>
+</nav>
+<script>
+        // Simple micro-interaction for the voice button
+        document.querySelector('.voice-pulse').addEventListener('click', function() {
+            const icon = this.querySelector('.material-symbols-outlined');
+            if (icon.innerText === 'mic') {
+                icon.innerText = 'graphic_eq';
+                this.style.backgroundColor = '#ba1a1a'; // Error color for recording state
+            } else {
+                icon.innerText = 'mic';
+                this.style.backgroundColor = '#2e7d32'; // Primary color
+            }
+        });
+
+        // Sticky header opacity scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

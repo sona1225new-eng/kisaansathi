@@ -6,13 +6,14 @@ import { useNavigate } from 'react-router-dom'
 
 export default function Navbar({ user }){
   const { location, openLocationModal } = useLocationContext()
-  const { logout } = useAuthContext()
+  const { logout, user: authUser } = useAuthContext()
   const navigate = useNavigate()
   const handleLogout = async () => { await logout(); navigate('/', { replace: true }); }
 
+  const currentUser = user || authUser || {}
   const displayLocation = location.city
     ? (location.state ? `${location.city}, ${location.state}` : location.city)
-    : (user.location || 'Madhepura, Bihar')
+    : (currentUser.location || 'Madhepura, Bihar')
 
   return (
     <header className="flex flex-wrap items-center justify-between py-4 gap-4">
@@ -41,7 +42,7 @@ export default function Navbar({ user }){
         <FiBell className="cursor-pointer text-gray-500 transition-all duration-300 hover:scale-110 hover:text-green-600 text-lg ml-1" />
 
         <div className="cursor-pointer rounded-xl px-2 py-1 transition-all duration-300 hover:bg-green-50 hover:shadow-sm">
-          <div className="text-sm font-semibold text-gray-800">{user.name || 'Ramesh Ji'}</div>
+          <div className="text-sm font-semibold text-gray-800">{currentUser.name || ''}</div>
           <div className="text-xs text-gray-500 truncate max-w-[120px]">{displayLocation}</div>
         </div>
         <button onClick={handleLogout} className="text-xs font-semibold text-gray-500 hover:text-red-600">Logout</button>
