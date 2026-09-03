@@ -48,7 +48,7 @@ export default function Navbar({ user, news }) {
           />
           <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
           {showNews && (
-            <div className="absolute right-0 top-8 w-80 bg-white rounded-2xl shadow-xl border border-gray-100 z-50 max-h-96 overflow-y-auto p-4">
+            <div className="fixed left-0 right-0 top-16 mx-3 bg-white rounded-2xl shadow-xl border border-gray-100 z-50 max-h-96 overflow-y-auto p-4">
               <h3 className="font-bold text-gray-800 mb-3 text-sm">Latest Updates & News</h3>
               {(news || []).map((item, i) => (
                 <div key={i} className="mb-3 pb-3 border-b border-gray-100 last:border-0">

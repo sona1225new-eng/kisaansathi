@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import Navbar from './components/Navbar'
 import WeatherCard from './components/WeatherCard'
@@ -18,7 +19,8 @@ import { user, quickActions, links } from './data/dummy'
 
 export default function App() {
   const { user: authUser, logout } = useAuthContext()
-  const handleLogout = () => logout()
+  const navigate = useNavigate()
+  const handleLogout = async () => { await logout(); navigate('/', { replace: true }); }
   const { profile, loading: profileLoading, error: profileError, success: profileSuccess } = useUserProfile()
   const { location, openLocationModal } = useLocationContext()
 
@@ -132,9 +134,7 @@ export default function App() {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-bold text-green-700">Kisaan Saathi</h2>
-            <button onClick={handleLogout} className="text-xs font-semibold text-red-500 border border-red-200 px-3 py-1 rounded-lg">
-              Logout
-            </button>
+            
             <button
               onClick={openLocationModal}
               className="text-xs bg-green-50 text-green-800 px-2.5 py-1 rounded-lg border border-green-200 font-semibold"
