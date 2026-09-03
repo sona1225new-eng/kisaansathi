@@ -17,7 +17,8 @@ import { useUserProfile } from './hooks/useUserProfile'
 import { user, quickActions, links } from './data/dummy'
 
 export default function App() {
-  const { user: authUser } = useAuthContext()
+  const { user: authUser, logout } = useAuthContext()
+  const handleLogout = () => logout()
   const { profile, loading: profileLoading, error: profileError, success: profileSuccess } = useUserProfile()
   const { location, openLocationModal } = useLocationContext()
 
@@ -131,6 +132,9 @@ export default function App() {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-bold text-green-700">Kisaan Saathi</h2>
+            <button onClick={handleLogout} className="text-xs font-semibold text-red-500 border border-red-200 px-3 py-1 rounded-lg">
+              Logout
+            </button>
             <button
               onClick={openLocationModal}
               className="text-xs bg-green-50 text-green-800 px-2.5 py-1 rounded-lg border border-green-200 font-semibold"
@@ -150,6 +154,9 @@ export default function App() {
               <QuickActions actions={quickActions} />
             </div>
             <MandiPrices items={dashboardMandi} />
+            <div className="w-full">
+              <News items={dashboardNews} />
+            </div>
           </div>
         </div>
       </div>
