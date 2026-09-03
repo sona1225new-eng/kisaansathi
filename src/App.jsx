@@ -16,7 +16,7 @@ import { useLocationData } from './hooks/useLocationData'
 import { useUserProfile } from './hooks/useUserProfile'
 import { user, quickActions, links } from './data/dummy'
 
-export default function App(){
+export default function App() {
   const { user: authUser } = useAuthContext()
   const { profile, loading: profileLoading, error: profileError, success: profileSuccess } = useUserProfile()
   const { location, openLocationModal } = useLocationContext()
@@ -48,13 +48,13 @@ export default function App(){
       {/* Global Location Modal */}
       <LocationModal />
 
-      <div className="md:flex">
-        <div className="hidden md:block">
+      <div className="md:flex w-full overflow-hidden">
+        <div className="hidden md:block flex-shrink-0 w-64">
           <Sidebar />
         </div>
 
-        <main className="flex-1 p-6 max-w-7xl mx-auto">
-          <Navbar user={userProfile} />
+        <main className="flex-1 min-w-0 overflow-x-hidden p-4">
+          <Navbar user={userProfile} news={dashboardNews} />
 
           <ApiStatus loading={isLoading} error={activeError} success={profileSuccess} />
 
@@ -97,9 +97,7 @@ export default function App(){
                 <MandiPrices items={dashboardMandi} />
               </div>
 
-              <div className="mt-6">
-                <News items={dashboardNews} />
-              </div>
+
             </div>
 
             <aside className="col-span-12 lg:col-span-4 space-y-4">

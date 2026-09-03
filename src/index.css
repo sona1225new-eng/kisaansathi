@@ -31,13 +31,45 @@ body{
   width: 100%;
 }
 
+/* Fix conflicting global rule */
 main.flex-1 {
   width: 100%;
-  padding-bottom: 70px;
 }
 
-header .cursor-pointer > div {
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
+/* Desktop fix */
+@media (min-width: 769px) {
+  main.flex-1 {
+    min-width: 0;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+  }
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  main.flex-1 {
+    max-width: 100% !important;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 70px;
+  }
+
+  header [class*="logout"],
+  header button[class*="logout"] {
+    display: none;
+  }
+
+  header .cursor-pointer > div {
+    max-width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-shadow,
+  .rounded-xl,
+  .rounded-2xl {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }

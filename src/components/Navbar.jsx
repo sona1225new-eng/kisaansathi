@@ -1,16 +1,18 @@
-import React from 'react'
+
+import React, { useState } from 'react'
 import { FiSearch, FiBell, FiMapPin, FiEdit3 } from 'react-icons/fi'
 import { useLocationContext } from '../context/LocationContext'
 import { useAuthContext } from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 
-export default function Navbar({ user }){
+export default function Navbar({ user, news }) {
   const { location, openLocationModal } = useLocationContext()
   const { logout, user: authUser } = useAuthContext()
   const navigate = useNavigate()
   const handleLogout = async () => { await logout(); navigate('/', { replace: true }); }
 
   const currentUser = user || authUser || {}
+  const [showNews, setShowNews] = useState(false)
   const displayLocation = location.city
     ? (location.state ? `${location.city}, ${location.state}` : location.city)
     : (currentUser.location || 'Madhepura, Bihar')
@@ -39,7 +41,24 @@ export default function Navbar({ user }){
           </span>
         </button>
 
-        <FiBell className="cursor-pointer text-gray-500 transition-all duration-300 hover:scale-110 hover:text-green-600 text-lg ml-1" />
+        <div className="relative">
+          <FiBell
+            onClick={() => setShowNews(!showNews)}
+            className="cursor-pointer text-gray-500 transition-all duration-300 hover:scale-110 hover:text-green-600 text-lg ml-1"
+          />
+          <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+          {showNews && (
+            <div className="absolute right-0 top-8 w-80 bg-white rounded-2xl shadow-xl border border-gray-100 z-50 max-h-96 overflow-y-auto p-4">
+              <h3 className="font-bold text-gray-800 mb-3 text-sm">Latest Updates & News</h3>
+              {(news || []).map((item, i) => (
+                <div key={i} className="mb-3 pb-3 border-b border-gray-100 last:border-0">
+                  <p className="text-sm font-semibold text-gray-800 line-clamp-2">{item.title}</p>
+                  <p className="text-xs text-gray-500 mt-1 line-clamp-2">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
 
         <div className="cursor-pointer rounded-xl px-2 py-1 transition-all duration-300 hover:bg-green-50 hover:shadow-sm">
           <div className="text-sm font-semibold text-gray-800">{currentUser.name || ''}</div>
@@ -50,3 +69,4 @@ export default function Navbar({ user }){
     </header>
   )
 }
+
