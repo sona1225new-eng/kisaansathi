@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<script>!function(){try{var t=localStorage.getItem('token')||sessionStorage.getItem('token'),p=t&&JSON.parse(atob(t.split('.')[1]));if(!p||p.exp*1e3<=Date.now())location.replace('/login')}catch(e){location.replace('/login')}}();</script>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Organic Farming - Kisaan Saathi</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <script>!function () { try { var t = localStorage.getItem('token') || sessionStorage.getItem('token'), p = t && JSON.parse(atob(t.split('.')[1])); if (!p || p.exp * 1e3 <= Date.now()) location.replace('/login') } catch (e) { location.replace('/login') } }();</script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Organic Farming - Kisaan Saathi</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -78,304 +85,369 @@
                         "headline-lg": ["Be Vietnam Pro"]
                     },
                     "fontSize": {
-                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
-                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
-                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
-                        "display-lg": ["44px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                        "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
-                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
-                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "display-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
                     }
                 }
             }
         }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
+
         .hero-gradient {
             background: linear-gradient(135deg, #2E7D32 0%, #0d631b 100%);
         }
+
         .pulse-animation {
             animation: pulse 2s infinite;
         }
+
         @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.4); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(46, 125, 50, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.4);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 15px rgba(46, 125, 50, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(46, 125, 50, 0);
+            }
         }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #f1f4ef; }
-        ::-webkit-scrollbar-thumb { background: #bfcaba; border-radius: 10px; }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f4ef;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #bfcaba;
+            border-radius: 10px;
+        }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
 <body class="bg-background font-body-md text-on-surface overflow-x-hidden">
-<!-- Sticky Header -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl px-container-padding py-4 flex items-center gap-4">
-<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors active:scale-95 duration-100">
-<span class="material-symbols-outlined text-primary">arrow_back</span>
-</button>
-<h1 class="font-title-lg text-title-lg text-on-surface">Organic Farming</h1>
-</header>
-<main class="pt-20 pb-32">
-<!-- Hero Section -->
-<section class="px-container-padding mb-section-margin">
-<div class="relative overflow-hidden rounded-3xl p-8 hero-gradient text-on-primary min-h-[320px] flex flex-col justify-end">
-<div class="absolute top-0 right-0 w-2/3 h-full opacity-40 mix-blend-overlay">
-<img class="w-full h-full object-cover" data-alt="A lush, vibrant organic farm in rural Bihar during sunrise. Farmers are tending to healthy green crops in terraced fields. The scene is bathed in golden morning light, highlighting the natural textures of the soil and plants. Modern agricultural tools and traditional techniques are shown side-by-side in a clean, artistic vector style that emphasizes sustainability and abundance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASe0E0Lm2ijNdBX_HMUM0-w96uPeHsm_lW1tViboXoPx18nDeD9uD_n1U5Y_q3M-YYWaRG3k2g8s8u9Lu17HnXo1OifFBhyxnYayxDbTOf51uKST8M7iAmcGJSQIjTpqHqd7bjlgqEzInFh5RJkPEjWivlMYL-r3HJozUPvhwadWMHMhnPDGjwl1IJDv_sY7MeVbd8q-8dD8SQmRpWqO85rWTHnwzOACSk76nWoBx9Sm-hvG_6KPlBTwSYzAcNlAHLKHoHLhBMHKc"/>
-</div>
-<div class="relative z-10 space-y-4 max-w-md">
-<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-white">Pure &amp; Sustainable Farming</h2>
-<p class="text-on-primary-container font-body-md opacity-90">Transform your fields with natural methods and secure a healthier future for Bihar's agriculture.</p>
-<button class="bg-surface-bright text-primary px-8 py-4 rounded-full font-label-lg shadow-lg active:scale-95 transition-transform">
+    <!-- Sticky Header -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl px-container-padding py-4 flex items-center gap-4">
+        <button
+            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors active:scale-95 duration-100">
+            <span class="material-symbols-outlined text-primary">arrow_back</span>
+        </button>
+        <h1 class="font-title-lg text-title-lg text-on-surface">Organic Farming</h1>
+    </header>
+    <main class="pt-20 pb-32">
+        <!-- Hero Section -->
+        <section class="px-container-padding mb-section-margin">
+            <div
+                class="relative overflow-hidden rounded-3xl p-8 hero-gradient text-on-primary min-h-[320px] flex flex-col justify-end">
+                <div class="absolute top-0 right-0 w-2/3 h-full opacity-40 mix-blend-overlay">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A lush, vibrant organic farm in rural Bihar during sunrise. Farmers are tending to healthy green crops in terraced fields. The scene is bathed in golden morning light, highlighting the natural textures of the soil and plants. Modern agricultural tools and traditional techniques are shown side-by-side in a clean, artistic vector style that emphasizes sustainability and abundance."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuASe0E0Lm2ijNdBX_HMUM0-w96uPeHsm_lW1tViboXoPx18nDeD9uD_n1U5Y_q3M-YYWaRG3k2g8s8u9Lu17HnXo1OifFBhyxnYayxDbTOf51uKST8M7iAmcGJSQIjTpqHqd7bjlgqEzInFh5RJkPEjWivlMYL-r3HJozUPvhwadWMHMhnPDGjwl1IJDv_sY7MeVbd8q-8dD8SQmRpWqO85rWTHnwzOACSk76nWoBx9Sm-hvG_6KPlBTwSYzAcNlAHLKHoHLhBMHKc" />
+                </div>
+                <div class="relative z-10 space-y-4 max-w-md">
+                    <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-white">Pure &amp; Sustainable
+                        Farming</h2>
+                    <p class="text-on-primary-container font-body-md opacity-90">Transform your fields with natural
+                        methods and secure a healthier future for Bihar's agriculture.</p>
+                    <button
+                        class="bg-surface-bright text-primary px-8 py-4 rounded-full font-label-lg shadow-lg active:scale-95 transition-transform">
                         Start Your Journey
                     </button>
-</div>
-</div>
-</section>
-<!-- Benefits Grid -->
-<section class="px-container-padding mb-section-margin">
-<div class="flex items-center justify-between mb-4">
-<h3 class="font-title-lg text-primary">Why Choose Organic?</h3>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-grid-gutter">
-<!-- Benefit Card 1 -->
-<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
-<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-primary">eco</span>
-</div>
-<span class="font-label-lg text-on-surface">Soil Health</span>
-</div>
-<!-- Benefit Card 2 -->
-<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
-<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-primary">payments</span>
-</div>
-<span class="font-label-lg text-on-surface">Better Prices</span>
-</div>
-<!-- Benefit Card 3 -->
-<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
-<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-primary">nature_people</span>
-</div>
-<span class="font-label-lg text-on-surface">Eco-friendly</span>
-</div>
-<!-- Benefit Card 4 -->
-<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
-<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-primary">agriculture</span>
-</div>
-<span class="font-label-lg text-on-surface">Healthier Yield</span>
-</div>
-<!-- Benefit Card 5 -->
-<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
-<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-primary">water_drop</span>
-</div>
-<span class="font-label-lg text-on-surface">Water Saving</span>
-</div>
-<!-- Benefit Card 6 -->
-<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
-<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-primary">all_inclusive</span>
-</div>
-<span class="font-label-lg text-on-surface">Sustainability</span>
-</div>
-</div>
-</section>
-<!-- Organic Fertilizers -->
-<section class="px-container-padding mb-section-margin">
-<h3 class="font-title-lg text-primary mb-4">Natural Nutrition</h3>
-<div class="flex overflow-x-auto gap-4 pb-4 no-scrollbar">
-<!-- Fertilizer 1 -->
-<div class="min-w-[280px] bg-white rounded-2xl p-6 shadow-sm border border-outline-variant/20">
-<div class="flex items-center gap-3 mb-3">
-<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center">
-<span class="material-symbols-outlined text-on-secondary-container">compost</span>
-</div>
-<h4 class="font-title-lg text-on-surface">Compost</h4>
-</div>
-<p class="text-on-surface-variant font-body-md mb-4">Decomposed organic matter that improves soil structure and provides slow-release nutrients.</p>
-<button class="text-primary font-label-lg flex items-center gap-1">Learn How <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
-</div>
-<!-- Fertilizer 2 -->
-<div class="min-w-[280px] bg-white rounded-2xl p-6 shadow-sm border border-outline-variant/20">
-<div class="flex items-center gap-3 mb-3">
-<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center">
-<span class="material-symbols-outlined text-on-secondary-container">bug_report</span>
-</div>
-<h4 class="font-title-lg text-on-surface">Vermicompost</h4>
-</div>
-<p class="text-on-surface-variant font-body-md mb-4">Earthworm-produced nutrient-rich manure that significantly boosts plant growth and immunity.</p>
-<button class="text-primary font-label-lg flex items-center gap-1">Learn How <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
-</div>
-<!-- Fertilizer 3 -->
-<div class="min-w-[280px] bg-white rounded-2xl p-6 shadow-sm border border-outline-variant/20">
-<div class="flex items-center gap-3 mb-3">
-<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center">
-<span class="material-symbols-outlined text-on-secondary-container">grass</span>
-</div>
-<h4 class="font-title-lg text-on-surface">Biofertilizers</h4>
-</div>
-<p class="text-on-surface-variant font-body-md mb-4">Living microorganisms that increase soil fertility through nitrogen fixation and phosphate solubilization.</p>
-<button class="text-primary font-label-lg flex items-center gap-1">Learn How <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
-</div>
-</div>
-</section>
-<!-- Certification Timeline -->
-<section class="px-container-padding mb-section-margin">
-<h3 class="font-title-lg text-primary mb-6">Certification Path</h3>
-<div class="relative space-y-8 before:content-[''] before:absolute before:left-5 before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant">
-<!-- Step 1 -->
-<div class="relative pl-12">
-<div class="absolute left-0 top-0 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white z-10 border-4 border-background">
-<span class="material-symbols-outlined text-sm">science</span>
-</div>
-<div>
-<h4 class="font-label-lg text-primary">Step 1: Soil Testing</h4>
-<p class="text-on-surface-variant text-body-md">Analyze existing chemical residues and nutrient profile of your land.</p>
-</div>
-</div>
-<!-- Step 2 -->
-<div class="relative pl-12">
-<div class="absolute left-0 top-0 w-10 h-10 bg-surface-container-high rounded-full flex items-center justify-center text-on-surface-variant z-10 border-4 border-background">
-<span class="material-symbols-outlined text-sm">app_registration</span>
-</div>
-<div>
-<h4 class="font-label-lg text-on-surface">Step 2: Registration</h4>
-<p class="text-on-surface-variant text-body-md">Register with NPOP or PGS-India through recognized local agencies.</p>
-</div>
-</div>
-<!-- Step 3 -->
-<div class="relative pl-12">
-<div class="absolute left-0 top-0 w-10 h-10 bg-surface-container-high rounded-full flex items-center justify-center text-on-surface-variant z-10 border-4 border-background">
-<span class="material-symbols-outlined text-sm">verified_user</span>
-</div>
-<div>
-<h4 class="font-label-lg text-on-surface">Step 3: Certification</h4>
-<p class="text-on-surface-variant text-body-md">Periodic inspections over 3 years leading to full organic status.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Govt Schemes -->
-<section class="px-container-padding mb-section-margin">
-<div class="bg-tertiary-container text-on-tertiary-container p-6 rounded-3xl relative overflow-hidden">
-<div class="absolute -right-4 -bottom-4 opacity-10">
-<span class="material-symbols-outlined text-9xl">gavel</span>
-</div>
-<h3 class="font-title-lg mb-2">Government Support</h3>
-<p class="mb-4 text-body-md">Unlock subsidies and training support for your organic transition.</p>
-<div class="space-y-3">
-<div class="bg-white/10 p-4 rounded-xl flex items-center justify-between backdrop-blur-md">
-<span class="font-label-lg">PKVY Scheme</span>
-<span class="material-symbols-outlined">chevron_right</span>
-</div>
-<div class="bg-white/10 p-4 rounded-xl flex items-center justify-between backdrop-blur-md">
-<span class="font-label-lg">Bihar Organic Subsidy</span>
-<span class="material-symbols-outlined">chevron_right</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Recommended Crops -->
-<section class="px-container-padding mb-section-margin">
-<h3 class="font-title-lg text-primary mb-4">Recommended for Bihar</h3>
-<div class="grid grid-cols-2 gap-grid-gutter">
-<div class="relative h-48 rounded-2xl overflow-hidden group">
-<img class="w-full h-full object-cover" data-alt="A macro shot of high-quality organic Basmati rice paddy grains still on the stalk, golden and healthy. The background shows a blurry green field under bright, clear daylight. The image is crisp, professional, and conveys high value and purity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH9B1zKsIRX2kdU3-2mlZGZoeMwjEZ9VqFAD86ln7Qs_qKlWZVNrgQZrDrC8NhckptWpiYT6yggAW9Opb0Wca-0riVe_o3WTY4CWxHupfgMFEcO7ajOabkleqxPpqPoGnUkHu3mQwRurgXed61sVQoNzl2PoWF7CKXH_3XQE9bLHP0LfqRTUV0Oi1LmfhGwtCHlHLRHxrcgxt0aqmiCYNkLpi6XqOg_ZFXOPe0BvARK8Z79YNvQ__XEqZAhvN5zClJoehn4U1Odqk"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
-<p class="text-white font-label-lg">Scented Paddy</p>
-</div>
-</div>
-<div class="relative h-48 rounded-2xl overflow-hidden group">
-<img class="w-full h-full object-cover" data-alt="Close-up of vibrant, dark green organic leafy vegetables and red tomatoes in a wicker basket, freshly harvested. Soft natural side-lighting emphasizes their organic texture and deep colors. Clean, modern farm-to-table aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlv4c32-mQBPa1XuQp5APoftL0dsi-SUKfE9gGHpplIGoYeitUbOo5srODHjC_2LPMIBe6HdYg8yIZCIMzHWu-7WFHnp-NH_jEQ7v07XLn5SQtNcRGjtq6xH4B6D6gyG8eTamIlcizEEcyr3y4jsr8Qx5eBNapfe67x2Ofhh0YshsjBBwS_yEzcTh57QUSB5RyzK2B0DItTJkMl5U7NI_wzEcC_Py2-FHGtoRzQqWJPeEqmiqBYilcbS8S10bxJ6sCcA7Ai1Tk_fg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
-<p class="text-white font-label-lg">Seasonal Veggies</p>
-</div>
-</div>
-</div>
-</section>
-<!-- FAQ Accordion -->
-<section class="px-container-padding mb-section-margin">
-<h3 class="font-title-lg text-primary mb-4">Common Questions</h3>
-<div class="space-y-3">
-<details class="bg-surface-container-low rounded-2xl group transition-all duration-300">
-<summary class="list-none p-5 flex justify-between items-center cursor-pointer font-label-lg">
+                </div>
+            </div>
+        </section>
+        <!-- Benefits Grid -->
+        <section class="px-container-padding mb-section-margin">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="font-title-lg text-primary">Why Choose Organic?</h3>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-grid-gutter">
+                <!-- Benefit Card 1 -->
+                <div
+                    class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined text-primary">eco</span>
+                    </div>
+                    <span class="font-label-lg text-on-surface">Soil Health</span>
+                </div>
+                <!-- Benefit Card 2 -->
+                <div
+                    class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined text-primary">payments</span>
+                    </div>
+                    <span class="font-label-lg text-on-surface">Better Prices</span>
+                </div>
+                <!-- Benefit Card 3 -->
+                <div
+                    class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined text-primary">nature_people</span>
+                    </div>
+                    <span class="font-label-lg text-on-surface">Eco-friendly</span>
+                </div>
+                <!-- Benefit Card 4 -->
+                <div
+                    class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined text-primary">agriculture</span>
+                    </div>
+                    <span class="font-label-lg text-on-surface">Healthier Yield</span>
+                </div>
+                <!-- Benefit Card 5 -->
+                <div
+                    class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined text-primary">water_drop</span>
+                    </div>
+                    <span class="font-label-lg text-on-surface">Water Saving</span>
+                </div>
+                <!-- Benefit Card 6 -->
+                <div
+                    class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined text-primary">all_inclusive</span>
+                    </div>
+                    <span class="font-label-lg text-on-surface">Sustainability</span>
+                </div>
+            </div>
+        </section>
+        <!-- Organic Fertilizers -->
+        <section class="px-container-padding mb-section-margin">
+            <h3 class="font-title-lg text-primary mb-4">Natural Nutrition</h3>
+            <div class="flex overflow-x-auto gap-4 pb-4 no-scrollbar">
+                <!-- Fertilizer 1 -->
+                <div class="min-w-[280px] bg-white rounded-2xl p-6 shadow-sm border border-outline-variant/20">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center">
+                            <span class="material-symbols-outlined text-on-secondary-container">compost</span>
+                        </div>
+                        <h4 class="font-title-lg text-on-surface">Compost</h4>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md mb-4">Decomposed organic matter that improves soil
+                        structure and provides slow-release nutrients.</p>
+                    <button class="text-primary font-label-lg flex items-center gap-1">Learn How <span
+                            class="material-symbols-outlined text-sm">arrow_forward</span></button>
+                </div>
+                <!-- Fertilizer 2 -->
+                <div class="min-w-[280px] bg-white rounded-2xl p-6 shadow-sm border border-outline-variant/20">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center">
+                            <span class="material-symbols-outlined text-on-secondary-container">bug_report</span>
+                        </div>
+                        <h4 class="font-title-lg text-on-surface">Vermicompost</h4>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md mb-4">Earthworm-produced nutrient-rich manure that
+                        significantly boosts plant growth and immunity.</p>
+                    <button class="text-primary font-label-lg flex items-center gap-1">Learn How <span
+                            class="material-symbols-outlined text-sm">arrow_forward</span></button>
+                </div>
+                <!-- Fertilizer 3 -->
+                <div class="min-w-[280px] bg-white rounded-2xl p-6 shadow-sm border border-outline-variant/20">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center">
+                            <span class="material-symbols-outlined text-on-secondary-container">grass</span>
+                        </div>
+                        <h4 class="font-title-lg text-on-surface">Biofertilizers</h4>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md mb-4">Living microorganisms that increase soil
+                        fertility through nitrogen fixation and phosphate solubilization.</p>
+                    <button class="text-primary font-label-lg flex items-center gap-1">Learn How <span
+                            class="material-symbols-outlined text-sm">arrow_forward</span></button>
+                </div>
+            </div>
+        </section>
+        <!-- Certification Timeline -->
+        <section class="px-container-padding mb-section-margin">
+            <h3 class="font-title-lg text-primary mb-6">Certification Path</h3>
+            <div
+                class="relative space-y-8 before:content-[''] before:absolute before:left-5 before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant">
+                <!-- Step 1 -->
+                <div class="relative pl-12">
+                    <div
+                        class="absolute left-0 top-0 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white z-10 border-4 border-background">
+                        <span class="material-symbols-outlined text-sm">science</span>
+                    </div>
+                    <div>
+                        <h4 class="font-label-lg text-primary">Step 1: Soil Testing</h4>
+                        <p class="text-on-surface-variant text-body-md">Analyze existing chemical residues and nutrient
+                            profile of your land.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative pl-12">
+                    <div
+                        class="absolute left-0 top-0 w-10 h-10 bg-surface-container-high rounded-full flex items-center justify-center text-on-surface-variant z-10 border-4 border-background">
+                        <span class="material-symbols-outlined text-sm">app_registration</span>
+                    </div>
+                    <div>
+                        <h4 class="font-label-lg text-on-surface">Step 2: Registration</h4>
+                        <p class="text-on-surface-variant text-body-md">Register with NPOP or PGS-India through
+                            recognized local agencies.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative pl-12">
+                    <div
+                        class="absolute left-0 top-0 w-10 h-10 bg-surface-container-high rounded-full flex items-center justify-center text-on-surface-variant z-10 border-4 border-background">
+                        <span class="material-symbols-outlined text-sm">verified_user</span>
+                    </div>
+                    <div>
+                        <h4 class="font-label-lg text-on-surface">Step 3: Certification</h4>
+                        <p class="text-on-surface-variant text-body-md">Periodic inspections over 3 years leading to
+                            full organic status.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Govt Schemes -->
+        <section class="px-container-padding mb-section-margin">
+            <div class="bg-tertiary-container text-on-tertiary-container p-6 rounded-3xl relative overflow-hidden">
+                <div class="absolute -right-4 -bottom-4 opacity-10">
+                    <span class="material-symbols-outlined text-9xl">gavel</span>
+                </div>
+                <h3 class="font-title-lg mb-2">Government Support</h3>
+                <p class="mb-4 text-body-md">Unlock subsidies and training support for your organic transition.</p>
+                <div class="space-y-3">
+                    <div class="bg-white/10 p-4 rounded-xl flex items-center justify-between backdrop-blur-md">
+                        <span class="font-label-lg">PKVY Scheme</span>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-xl flex items-center justify-between backdrop-blur-md">
+                        <span class="font-label-lg">Bihar Organic Subsidy</span>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Recommended Crops -->
+        <section class="px-container-padding mb-section-margin">
+            <h3 class="font-title-lg text-primary mb-4">Recommended for Bihar</h3>
+            <div class="grid grid-cols-2 gap-grid-gutter">
+                <div class="relative h-48 rounded-2xl overflow-hidden group">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A macro shot of high-quality organic Basmati rice paddy grains still on the stalk, golden and healthy. The background shows a blurry green field under bright, clear daylight. The image is crisp, professional, and conveys high value and purity."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH9B1zKsIRX2kdU3-2mlZGZoeMwjEZ9VqFAD86ln7Qs_qKlWZVNrgQZrDrC8NhckptWpiYT6yggAW9Opb0Wca-0riVe_o3WTY4CWxHupfgMFEcO7ajOabkleqxPpqPoGnUkHu3mQwRurgXed61sVQoNzl2PoWF7CKXH_3XQE9bLHP0LfqRTUV0Oi1LmfhGwtCHlHLRHxrcgxt0aqmiCYNkLpi6XqOg_ZFXOPe0BvARK8Z79YNvQ__XEqZAhvN5zClJoehn4U1Odqk" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <p class="text-white font-label-lg">Scented Paddy</p>
+                    </div>
+                </div>
+                <div class="relative h-48 rounded-2xl overflow-hidden group">
+                    <img class="w-full h-full object-cover"
+                        data-alt="Close-up of vibrant, dark green organic leafy vegetables and red tomatoes in a wicker basket, freshly harvested. Soft natural side-lighting emphasizes their organic texture and deep colors. Clean, modern farm-to-table aesthetic."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlv4c32-mQBPa1XuQp5APoftL0dsi-SUKfE9gGHpplIGoYeitUbOo5srODHjC_2LPMIBe6HdYg8yIZCIMzHWu-7WFHnp-NH_jEQ7v07XLn5SQtNcRGjtq6xH4B6D6gyG8eTamIlcizEEcyr3y4jsr8Qx5eBNapfe67x2Ofhh0YshsjBBwS_yEzcTh57QUSB5RyzK2B0DItTJkMl5U7NI_wzEcC_Py2-FHGtoRzQqWJPeEqmiqBYilcbS8S10bxJ6sCcA7Ai1Tk_fg" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <p class="text-white font-label-lg">Seasonal Veggies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Accordion -->
+        <section class="px-container-padding mb-section-margin">
+            <h3 class="font-title-lg text-primary mb-4">Common Questions</h3>
+            <div class="space-y-3">
+                <details class="bg-surface-container-low rounded-2xl group transition-all duration-300">
+                    <summary class="list-none p-5 flex justify-between items-center cursor-pointer font-label-lg">
                         Is production lower in organic?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-5 pb-5 text-on-surface-variant text-body-md border-t border-outline-variant/20 pt-3">
-                        Initially, there may be a 10-15% dip, but soil health improves over 3 years, eventually matching or exceeding traditional yields with lower input costs.
+                        <span
+                            class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-on-surface-variant text-body-md border-t border-outline-variant/20 pt-3">
+                        Initially, there may be a 10-15% dip, but soil health improves over 3 years, eventually matching
+                        or exceeding traditional yields with lower input costs.
                     </div>
-</details>
-<details class="bg-surface-container-low rounded-2xl group transition-all duration-300">
-<summary class="list-none p-5 flex justify-between items-center cursor-pointer font-label-lg">
+                </details>
+                <details class="bg-surface-container-low rounded-2xl group transition-all duration-300">
+                    <summary class="list-none p-5 flex justify-between items-center cursor-pointer font-label-lg">
                         Where to sell organic produce?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-5 pb-5 text-on-surface-variant text-body-md border-t border-outline-variant/20 pt-3">
-                        Kisaan Saathi connects you to premium markets in Patna and export hubs that pay 20-30% higher than regular mandi prices.
+                        <span
+                            class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-on-surface-variant text-body-md border-t border-outline-variant/20 pt-3">
+                        Kisaan Saathi connects you to premium markets in Patna and export hubs that pay 20-30% higher
+                        than regular mandi prices.
                     </div>
-</details>
-</div>
-</section>
-</main>
-<!-- FAB: Voice Assistant -->
-<div class="fixed bottom-24 right-6 z-40">
-<button class="pulse-animation w-16 h-16 rounded-full bg-primary text-white shadow-2xl flex items-center justify-center hover:bg-surface-tint active:scale-90 transition-all">
-<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">mic</span>
-</button>
-</div>
-<!-- Bottom Navigation Shell -->
-<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest border-t border-outline-variant shadow-md flex justify-around items-center px-4 pb-6 pt-2 rounded-t-3xl">
-<div class="flex flex-col items-center justify-center text-on-surface-variant">
-<span class="material-symbols-outlined">home</span>
-<span class="text-label-md font-label-md">Home</span>
-</div>
-<div class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
-<span class="text-label-md font-label-md">Organic</span>
-</div>
-<div class="flex flex-col items-center justify-center text-on-surface-variant">
-<span class="material-symbols-outlined">grass</span>
-<span class="text-label-md font-label-md">Crops</span>
-</div>
-<div class="flex flex-col items-center justify-center text-on-surface-variant">
-<span class="material-symbols-outlined">storefront</span>
-<span class="text-label-md font-label-md">Mandi</span>
-</div>
-<div class="flex flex-col items-center justify-center text-on-surface-variant">
-<span class="material-symbols-outlined">person</span>
-<span class="text-label-md font-label-md">Profile</span>
-</div>
-</nav>
-<!-- Footer -->
-<footer class="bg-surface-container-high px-container-padding py-10 text-center mb-24">
-<div class="flex flex-col items-center gap-2 mb-6">
-<h2 class="font-title-lg text-primary">KISAAN SAATHI</h2>
-<p class="text-on-surface-variant text-label-md">Empowering the farmers of Bihar</p>
-</div>
-<div class="flex justify-center gap-6 text-primary font-label-lg">
-<a class="hover:underline" href="#">Contact</a>
-<a class="hover:underline" href="#">Schemes</a>
-<a class="hover:underline" href="#">Support</a>
-</div>
-<p class="mt-8 text-on-surface-variant text-label-md opacity-60">© 2024 Kisaan Saathi App. All Rights Reserved.</p>
-</footer>
-<script>
+                </details>
+            </div>
+        </section>
+    </main>
+    <!-- FAB: Voice Assistant -->
+    <div class="fixed bottom-24 right-6 z-40">
+        <button
+            class="pulse-animation w-16 h-16 rounded-full bg-primary text-white shadow-2xl flex items-center justify-center hover:bg-surface-tint active:scale-90 transition-all">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">mic</span>
+        </button>
+    </div>
+    <!-- Bottom Navigation Shell -->
+    <nav
+        class="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest border-t border-outline-variant shadow-md flex justify-around items-center px-4 pb-6 pt-2 rounded-t-3xl">
+        <div class="flex flex-col items-center justify-center text-on-surface-variant">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-label-md font-label-md">Home</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+            <span class="text-label-md font-label-md">Organic</span>
+        </div>
+        <div class="flex flex-col items-center justify-center text-on-surface-variant">
+            <span class="material-symbols-outlined">grass</span>
+            <span class="text-label-md font-label-md">Crops</span>
+        </div>
+        <div class="flex flex-col items-center justify-center text-on-surface-variant">
+            <span class="material-symbols-outlined">storefront</span>
+            <span class="text-label-md font-label-md">Mandi</span>
+        </div>
+        <div class="flex flex-col items-center justify-center text-on-surface-variant">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-label-md font-label-md">Profile</span>
+        </div>
+    </nav>
+    <!-- Footer -->
+    <footer class="bg-surface-container-high px-container-padding py-10 text-center mb-24">
+        <div class="flex flex-col items-center gap-2 mb-6">
+            <h2 class="font-title-lg text-primary">KISAAN SAATHI</h2>
+            <p class="text-on-surface-variant text-label-md">Empowering the farmers of Bihar</p>
+        </div>
+        <div class="flex justify-center gap-6 text-primary font-label-lg">
+            <a class="hover:underline" href="#">Contact</a>
+            <a class="hover:underline" href="#">Schemes</a>
+            <a class="hover:underline" href="#">Support</a>
+        </div>
+        <p class="mt-8 text-on-surface-variant text-label-md opacity-60">© 2024 Kisaan Saathi App. All Rights Reserved.
+        </p>
+    </footer>
+    <script>
         // Simple Micro-interaction for Detail toggles
         document.querySelectorAll('details').forEach((el) => {
             el.addEventListener('toggle', (e) => {
@@ -401,5 +473,8 @@
             }
         });
     </script>
-<script src="/js/shared-location.js"></script>
-</body></html>
+    <script src="/js/shared-location.js"></script>
+    <script src="/js/mic.js"></script>
+</body>
+
+</html>

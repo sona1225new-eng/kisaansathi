@@ -1,458 +1,521 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<script>!function(){try{var t=localStorage.getItem('token')||sessionStorage.getItem('token'),p=t&&JSON.parse(atob(t.split('.')[1]));if(!p||p.exp*1e3<=Date.now())location.replace('/login')}catch(e){location.replace('/login')}}();</script>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Government Schemes | Kisaan Saathi</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary-fixed": "#d6e3ff",
-                    "primary": "#0d631b",
-                    "surface-container-low": "#f1f4ef",
-                    "on-secondary-fixed-variant": "#005313",
-                    "primary-container": "#2e7d32",
-                    "outline-variant": "#bfcaba",
-                    "error-container": "#ffdad6",
-                    "on-secondary-container": "#0c7521",
-                    "surface-container": "#ecefea",
-                    "surface-dim": "#d8dbd6",
-                    "primary-fixed-dim": "#88d982",
-                    "on-error-container": "#93000a",
-                    "primary-fixed": "#a3f69c",
-                    "inverse-primary": "#88d982",
-                    "surface-container-lowest": "#ffffff",
-                    "on-primary": "#ffffff",
-                    "surface": "#f7faf5",
-                    "on-tertiary-fixed": "#001b3d",
-                    "inverse-on-surface": "#eff2ed",
-                    "on-error": "#ffffff",
-                    "secondary-fixed": "#98f994",
-                    "on-secondary": "#ffffff",
-                    "on-primary-fixed-variant": "#005312",
-                    "surface-variant": "#e0e3df",
-                    "tertiary-container": "#246dc8",
-                    "secondary-container": "#98f994",
-                    "on-background": "#181c1a",
-                    "tertiary": "#0054a7",
-                    "surface-container-high": "#e6e9e4",
-                    "outline": "#707a6c",
-                    "secondary-fixed-dim": "#7ddc7a",
-                    "on-surface-variant": "#40493d",
-                    "error": "#ba1a1a",
-                    "on-tertiary": "#ffffff",
-                    "secondary": "#006e1c",
-                    "on-tertiary-container": "#edf1ff",
-                    "on-primary-container": "#cbffc2",
-                    "surface-tint": "#1b6d24",
-                    "on-tertiary-fixed-variant": "#00468c",
-                    "background": "#f7faf5",
-                    "surface-bright": "#f7faf5",
-                    "inverse-surface": "#2d312e",
-                    "on-secondary-fixed": "#002204",
-                    "on-primary-fixed": "#002204",
-                    "tertiary-fixed-dim": "#a9c7ff",
-                    "on-surface": "#181c1a",
-                    "surface-container-highest": "#e0e3df"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "2xl": "1rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "stack-gap": "16px",
-                    "grid-gutter": "12px",
-                    "section-margin": "32px",
-                    "container-padding": "20px",
-                    "base": "4px"
-            },
-            "fontFamily": {
-                    "label-lg": ["Be Vietnam Pro"],
-                    "headline-lg-mobile": ["Be Vietnam Pro"],
-                    "headline-lg": ["Be Vietnam Pro"],
-                    "label-md": ["Be Vietnam Pro"],
-                    "body-md": ["Be Vietnam Pro"],
-                    "title-lg": ["Be Vietnam Pro"],
-                    "display-lg": ["Be Vietnam Pro"],
-                    "body-lg": ["Be Vietnam Pro"]
-            },
-            "fontSize": {
-                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
-                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
-                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
-                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
-                    "display-lg": ["44px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                    "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}]
-            }
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <script>!function () { try { var t = localStorage.getItem('token') || sessionStorage.getItem('token'), p = t && JSON.parse(atob(t.split('.')[1])); if (!p || p.exp * 1e3 <= Date.now()) location.replace('/login') } catch (e) { location.replace('/login') } }();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Government Schemes | Kisaan Saathi</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#d6e3ff",
+            "primary": "#0d631b",
+            "surface-container-low": "#f1f4ef",
+            "on-secondary-fixed-variant": "#005313",
+            "primary-container": "#2e7d32",
+            "outline-variant": "#bfcaba",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#0c7521",
+            "surface-container": "#ecefea",
+            "surface-dim": "#d8dbd6",
+            "primary-fixed-dim": "#88d982",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#a3f69c",
+            "inverse-primary": "#88d982",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface": "#f7faf5",
+            "on-tertiary-fixed": "#001b3d",
+            "inverse-on-surface": "#eff2ed",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#98f994",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#005312",
+            "surface-variant": "#e0e3df",
+            "tertiary-container": "#246dc8",
+            "secondary-container": "#98f994",
+            "on-background": "#181c1a",
+            "tertiary": "#0054a7",
+            "surface-container-high": "#e6e9e4",
+            "outline": "#707a6c",
+            "secondary-fixed-dim": "#7ddc7a",
+            "on-surface-variant": "#40493d",
+            "error": "#ba1a1a",
+            "on-tertiary": "#ffffff",
+            "secondary": "#006e1c",
+            "on-tertiary-container": "#edf1ff",
+            "on-primary-container": "#cbffc2",
+            "surface-tint": "#1b6d24",
+            "on-tertiary-fixed-variant": "#00468c",
+            "background": "#f7faf5",
+            "surface-bright": "#f7faf5",
+            "inverse-surface": "#2d312e",
+            "on-secondary-fixed": "#002204",
+            "on-primary-fixed": "#002204",
+            "tertiary-fixed-dim": "#a9c7ff",
+            "on-surface": "#181c1a",
+            "surface-container-highest": "#e0e3df"
           },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "stack-gap": "16px",
+            "grid-gutter": "12px",
+            "section-margin": "32px",
+            "container-padding": "20px",
+            "base": "4px"
+          },
+          "fontFamily": {
+            "label-lg": ["Be Vietnam Pro"],
+            "headline-lg-mobile": ["Be Vietnam Pro"],
+            "headline-lg": ["Be Vietnam Pro"],
+            "label-md": ["Be Vietnam Pro"],
+            "body-md": ["Be Vietnam Pro"],
+            "title-lg": ["Be Vietnam Pro"],
+            "display-lg": ["Be Vietnam Pro"],
+            "body-lg": ["Be Vietnam Pro"]
+          },
+          "fontSize": {
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "title-lg": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "400" }]
+          }
         },
-      }
-    </script>
-<style>
-        body {
-            background-color: #f7faf5;
-            font-family: 'Be Vietnam Pro', sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
-<style>
+      },
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f7faf5;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
+</head>
+
 <body class="pb-24">
-<!-- Sticky Header -->
-<header class="sticky top-0 z-50 bg-surface/70 backdrop-blur-xl flex justify-between items-center w-full px-container-padding py-4">
-<div class="flex items-center gap-4">
-<button class="active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-primary">arrow_back</span>
-</button>
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Government Schemes</h1>
-</div>
-<button class="relative active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-primary">notifications</span>
-<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
-</button>
-</header>
-<main class="space-y-8">
-<!-- Hero Section -->
-<section class="relative overflow-hidden px-container-padding py-8 bg-gradient-to-br from-primary/10 via-surface to-primary/5">
-<div class="absolute -right-16 -top-16 opacity-10">
-<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">agriculture</span>
-</div>
-<div class="relative z-10">
-<h2 class="font-display-lg text-primary mb-2">Sarkari Yojanaen</h2>
-<p class="font-body-lg text-on-surface-variant max-w-xs md:max-w-md">Empowering Bihar's farmers with direct benefits and financial support.</p>
-</div>
-</section>
-<!-- Search & Filter Bar -->
-<section class="px-container-padding -mt-12">
-<div class="bg-surface-container-lowest shadow-md rounded-2xl p-4 space-y-4">
-<div class="relative flex items-center">
-<span class="material-symbols-outlined absolute left-4 text-outline">search</span>
-<input class="w-full pl-12 pr-4 py-3 rounded-xl border-1.5 border-outline-variant focus:border-primary focus:ring-0 text-body-md bg-surface-bright" placeholder="Search for schemes (e.g. PM-Kisan)" type="text"/>
-</div>
-<div class="flex gap-2 overflow-x-auto hide-scrollbar -mx-2 px-2">
-<button class="whitespace-nowrap px-4 py-2 rounded-full bg-primary text-on-primary font-label-lg shadow-sm">All</button>
-<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg hover:bg-primary/10 transition-colors">Central</button>
-<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg hover:bg-primary/10 transition-colors">State</button>
-<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg hover:bg-primary/10 transition-colors">Subsidy</button>
-<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg hover:bg-primary/10 transition-colors">Insurance</button>
-</div>
-</div>
-</section>
-<!-- Featured Schemes -->
-<section>
-<div class="px-container-padding flex justify-between items-end mb-4">
-<h3 class="font-title-lg text-on-surface">Featured Schemes</h3>
-<button class="text-primary font-label-lg">View All</button>
-</div>
-<div class="flex gap-4 overflow-x-auto px-container-padding pb-4 hide-scrollbar">
-<!-- Card 1 -->
-<div class="min-w-[280px] bg-white rounded-2xl shadow-md p-5 border border-outline-variant/30">
-<div class="flex items-center gap-3 mb-4">
-<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center">
-<span class="material-symbols-outlined text-on-primary-fixed-variant" style="font-variation-settings: 'FILL' 1;">payments</span>
-</div>
-<div>
-<h4 class="font-label-lg text-on-surface leading-tight">PM-Kisan Samman Nidhi</h4>
-<span class="text-[10px] uppercase font-bold text-primary tracking-wider">Central Govt</span>
-</div>
-</div>
-<div class="bg-primary/5 rounded-lg p-3 mb-4">
-<p class="text-label-md text-on-surface-variant">Benefit Amount</p>
-<p class="font-headline-lg text-primary">₹6000<span class="text-body-md">/year</span></p>
-</div>
-<button class="w-full py-2 bg-primary text-on-primary rounded-xl font-label-lg shadow-md active:scale-95 transition-transform">Apply Now</button>
-</div>
-<!-- Card 2 -->
-<div class="min-w-[280px] bg-white rounded-2xl shadow-md p-5 border border-outline-variant/30">
-<div class="flex items-center gap-3 mb-4">
-<div class="w-12 h-12 bg-secondary-fixed rounded-xl flex items-center justify-center">
-<span class="material-symbols-outlined text-on-secondary-fixed-variant" style="font-variation-settings: 'FILL' 1;">eco</span>
-</div>
-<div>
-<h4 class="font-label-lg text-on-surface leading-tight">Bihar Rajya Fasal Sahayata</h4>
-<span class="text-[10px] uppercase font-bold text-secondary tracking-wider">Bihar Govt</span>
-</div>
-</div>
-<div class="bg-secondary/5 rounded-lg p-3 mb-4">
-<p class="text-label-md text-on-surface-variant">Max Compensation</p>
-<p class="font-headline-lg text-secondary">₹10,000<span class="text-body-md">/ha</span></p>
-</div>
-<button class="w-full py-2 bg-primary text-on-primary rounded-xl font-label-lg shadow-md active:scale-95 transition-transform">Apply Now</button>
-</div>
-</div>
-</section>
-<!-- Latest Announcements -->
-<section class="px-container-padding">
-<div class="bg-primary-container text-on-primary-container rounded-2xl p-4 flex items-center gap-4 relative overflow-hidden">
-<div class="absolute -right-4 -bottom-4 opacity-10">
-<span class="material-symbols-outlined text-6xl">campaign</span>
-</div>
-<div class="bg-white/20 p-2 rounded-full">
-<span class="material-symbols-outlined">campaign</span>
-</div>
-<div class="flex-1">
-<div class="flex items-center gap-2 mb-1">
-<span class="bg-error text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">New</span>
-<h4 class="font-label-lg">Registration Deadline Extended</h4>
-</div>
-<p class="text-sm opacity-90">KCC application date extended to Dec 31, 2023. Apply today to avoid late fees.</p>
-</div>
-</div>
-</section>
-<!-- Grid of Scheme Cards -->
-<section class="px-container-padding">
-<h3 class="font-title-lg text-on-surface mb-4">All Schemes</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter">
-<!-- Scheme 1 -->
-<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 flex flex-col h-full">
-<div class="flex justify-between items-start mb-4">
-<h4 class="font-headline-lg-mobile text-primary">KCC - Kisan Credit Card</h4>
-<span class="material-symbols-outlined text-primary">credit_score</span>
-</div>
-<div class="space-y-4 flex-1">
-<div>
-<p class="font-label-md text-outline uppercase tracking-wider mb-1">Eligibility</p>
-<p class="font-body-md text-on-surface">All land-holding farmers, tenant farmers, and oral lessees.</p>
-</div>
-<div>
-<p class="font-label-md text-outline uppercase tracking-wider mb-1">Key Benefits</p>
-<ul class="space-y-1">
-<li class="flex items-start gap-2 text-body-md">
-<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-<span>Loan up to ₹3 Lakh at 4% interest.</span>
-</li>
-<li class="flex items-start gap-2 text-body-md">
-<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-<span>Personal accident insurance cover.</span>
-</li>
-</ul>
-</div>
-<div class="p-3 bg-error-container/20 rounded-xl">
-<p class="text-error font-label-lg flex items-center gap-2">
-<span class="material-symbols-outlined text-lg">timer</span>
-                                Deadline: 15 Dec 2023
-                            </p>
-</div>
-<div>
-<p class="font-label-md text-outline uppercase tracking-wider mb-1">Documents Required</p>
-<p class="text-sm text-on-surface-variant italic">Aadhar Card, Land Record (LPC), Passport Photo, Bank Passbook.</p>
-</div>
-</div>
-<button class="mt-6 w-full py-4 bg-primary text-on-primary rounded-xl font-label-lg shadow-md hover:bg-primary-container transition-colors">Apply Now</button>
-</div>
-<!-- Scheme 2 -->
-<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 flex flex-col h-full">
-<div class="flex justify-between items-start mb-4">
-<h4 class="font-headline-lg-mobile text-primary">PM Fasal Bima Yojana</h4>
-<span class="material-symbols-outlined text-primary">security</span>
-</div>
-<div class="space-y-4 flex-1">
-<div>
-<p class="font-label-md text-outline uppercase tracking-wider mb-1">Eligibility</p>
-<p class="font-body-md text-on-surface">Farmers growing notified crops in notified areas.</p>
-</div>
-<div>
-<p class="font-label-md text-outline uppercase tracking-wider mb-1">Key Benefits</p>
-<ul class="space-y-1">
-<li class="flex items-start gap-2 text-body-md">
-<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-<span>Protection against natural calamities.</span>
-</li>
-<li class="flex items-start gap-2 text-body-md">
-<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-<span>Very low premium rates (1.5% - 2%).</span>
-</li>
-</ul>
-</div>
-<div>
-<p class="font-label-md text-outline uppercase tracking-wider mb-1">Documents Required</p>
-<p class="text-sm text-on-surface-variant italic">Sowing Certificate, Land Records, Bank Details.</p>
-</div>
-</div>
-<button class="mt-6 w-full py-4 bg-primary text-on-primary rounded-xl font-label-lg shadow-md hover:bg-primary-container transition-colors">Apply Now</button>
-</div>
-</div>
-</section>
-<!-- Special Sections (Categories) -->
-<section class="px-container-padding">
-<h3 class="font-title-lg text-on-surface mb-4">Browse by Category</h3>
-<div class="grid grid-cols-3 gap-3">
-<button class="flex flex-col items-center p-4 bg-surface-container rounded-2xl active:scale-95 transition-transform">
-<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2 shadow-sm text-primary">
-<span class="material-symbols-outlined">atr</span>
-</div>
-<span class="text-xs font-label-lg text-center">Subsidies</span>
-</button>
-<button class="flex flex-col items-center p-4 bg-surface-container rounded-2xl active:scale-95 transition-transform">
-<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2 shadow-sm text-primary">
-<span class="material-symbols-outlined">account_balance</span>
-</div>
-<span class="text-xs font-label-lg text-center">Loans</span>
-</button>
-<button class="flex flex-col items-center p-4 bg-surface-container rounded-2xl active:scale-95 transition-transform">
-<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2 shadow-sm text-primary">
-<span class="material-symbols-outlined">shield</span>
-</div>
-<span class="text-xs font-label-lg text-center">Insurance</span>
-</button>
-</div>
-</section>
-<!-- FAQ Accordion -->
-<section class="px-container-padding">
-<h3 class="font-title-lg text-on-surface mb-4">Frequently Asked Questions</h3>
-<div class="space-y-2">
-<details class="group bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
-<summary class="flex justify-between items-center p-4 cursor-pointer list-none font-label-lg text-on-surface">
-                        How to check PM-Kisan status?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="p-4 pt-0 text-body-md text-on-surface-variant">
-                        Go to the official PM-Kisan portal, click on 'Beneficiary Status', enter your Aadhaar number or Account number to view the details of your installments.
-                    </div>
-</details>
-<details class="group bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
-<summary class="flex justify-between items-center p-4 cursor-pointer list-none font-label-lg text-on-surface">
-                        Documents for Bihar Fasal Sahayata?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="p-4 pt-0 text-body-md text-on-surface-variant">
-                        Required documents include: Aadhar card, Land Possession Certificate (LPC) or land rent receipt, Bank Passbook, and a self-declaration certificate.
-                    </div>
-</details>
-</div>
-</section>
-<!-- CTA - Agriculture Officer -->
-<section class="px-container-padding">
-<div class="bg-inverse-surface text-inverse-on-surface p-6 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
-<div class="text-center md:text-left">
-<h4 class="font-title-lg mb-1">Need help with applications?</h4>
-<p class="opacity-80">Our experts can guide you through the process.</p>
-</div>
-<a class="flex items-center gap-3 px-8 py-4 bg-primary text-on-primary rounded-full font-label-lg hover:bg-primary-container transition-all shadow-lg active:scale-95" href="tel:1800-123-4567">
-<span class="material-symbols-outlined">call</span>
-                    Talk to Agriculture Officer
-                </a>
-</div>
-</section>
-</main>
-<!-- Navigation Drawer (Side) - Hidden by default, triggered by JS or left for visual representation -->
-<div class="hidden fixed inset-y-0 left-0 w-80 z-[60] bg-surface shadow-lg transition-transform duration-300 ease-in-out -translate-x-full" id="sideNav">
-<div class="p-6 h-full flex flex-col">
-<div class="flex items-center gap-4 mb-8">
-<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover" data-alt="A portrait of a smiling middle-aged Indian farmer wearing a traditional white kurta and a green turban, set against a blurred background of a lush green agricultural field at sunset. The lighting is warm and cinematic, reflecting the premium agricultural partner brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_2O2DA7JniwBwqL5vokJnto2jrpWXvnECO3WShCXQdkmWnbDixCgbkAUBu0bnwmG3vwfpqkk_6DQ-iQssMz1uueHk-A222fGDTdXpiqo1_7IHPv4QjXH2XvlgH6QGUDbZteME9_JN2Aj-LU_Q5J9i4y6wKU_TVyTU3CooMgP93TumJrr_jUKDZE8ZCj3l31StcxkVkzPIERDkht58M4fMoBWGc06pbJVRUJplxHXKWDtl3xVeIEn0fS8kp8dXG1vuXJL5PIRzGRQ"/>
-</div>
-<div>
-<h3 class="font-title-lg text-on-surface">Farmer</h3>
-<p class="text-sm text-on-surface-variant">Madhepura, Bihar</p>
-</div>
-</div>
-<nav class="space-y-1 flex-1">
-<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="#">
-<span class="material-symbols-outlined">agriculture</span>
-<span class="font-label-lg">My Farm</span>
-</a>
-<a class="flex items-center gap-4 px-4 py-3 rounded-xl bg-primary-container text-on-primary-container font-bold" href="#">
-<span class="material-symbols-outlined">gavel</span>
-<span class="font-label-lg">Government Schemes</span>
-</a>
-<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="#">
-<span class="material-symbols-outlined">language</span>
-<span class="font-label-lg">Language Settings</span>
-</a>
-<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="#">
-<span class="material-symbols-outlined">help</span>
-<span class="font-label-lg">Help Support</span>
-</a>
-</nav>
-</div>
-</div>
-<script>
-  (() => {
-    try {
-      const raw = localStorage.getItem('ks_user') || sessionStorage.getItem('ks_user');
-      if (!raw) return;
-      const user = JSON.parse(raw);
-      const name = user && user.name ? String(user.name).trim() : '';
-      if (!name) return;
-      const sideName = document.querySelector('#sideNav h3');
-      if (sideName && sideName.textContent.trim() === 'Farmer') {
-        sideName.textContent = name;
-      }
-    } catch (e) {}
-  })();
-</script>
-<!-- Bottom Navigation Bar -->
-<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-base pb-6 pt-2 bg-surface-container-lowest border-t border-outline-variant shadow-md">
-<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all" href="#">
-<span class="material-symbols-outlined">home</span>
-<span class="font-label-md">Home</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all" href="#">
-<span class="material-symbols-outlined">cloudy</span>
-<span class="font-label-md">Weather</span>
-</a>
-<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:scale-90 transition-all" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">gavel</span>
-<span class="font-label-md">Crops</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all" href="#">
-<span class="material-symbols-outlined">storefront</span>
-<span class="font-label-md">Mandi</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all" href="#">
-<span class="material-symbols-outlined">person</span>
-<span class="font-label-md">Profile</span>
-</a>
-</nav>
-<!-- Floating Voice Assistant -->
-<button class="fixed bottom-24 right-6 w-14 h-14 bg-gradient-to-br from-primary to-secondary text-white rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-transform z-50">
-<span class="material-symbols-outlined text-3xl">mic</span>
-<div class="absolute inset-0 rounded-full bg-primary/30 animate-ping"></div>
-</button>
-<script>
-        // Micro-interactions and simple state management
-        document.querySelectorAll('details').forEach((el) => {
-            el.addEventListener('toggle', (e) => {
-                if (el.open) {
-                    document.querySelectorAll('details').forEach((otherEl) => {
-                        if (otherEl !== el) otherEl.open = false;
-                    });
-                }
-            });
-        });
-    </script>
-<script src="/js/shared-location.js"></script>
-</body></html>
+  <!-- Sticky Header -->
+  <header
+    class="sticky top-0 z-50 bg-surface/70 backdrop-blur-xl flex justify-between items-center w-full px-container-padding py-4">
+    <div class="flex items-center gap-4">
+      <button class="active:scale-95 transition-transform">
+        <span class="material-symbols-outlined text-primary">arrow_back</span>
+      </button>
+      <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Government Schemes</h1>
+    </div>
+    <button class="relative active:scale-95 transition-transform">
+      <span class="material-symbols-outlined text-primary">notifications</span>
+      <span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+    </button>
+  </header>
+  <main class="space-y-8">
+    <!-- Hero Section -->
+    <section
+      class="relative overflow-hidden px-container-padding py-8 bg-gradient-to-br from-primary/10 via-surface to-primary/5">
+      <div class="absolute -right-16 -top-16 opacity-10">
+        <span class="material-symbols-outlined text-[200px]"
+          style="font-variation-settings: 'FILL' 1;">agriculture</span>
+      </div>
+      <div class="relative z-10">
+        <h2 class="font-display-lg text-primary mb-2">Sarkari Yojanaen</h2>
+        <p class="font-body-lg text-on-surface-variant max-w-xs md:max-w-md">Empowering Bihar's farmers with direct
+          benefits and financial support.</p>
+      </div>
+    </section>
+    <!-- Search & Filter Bar -->
+    <section class="px-container-padding -mt-12">
+      <div class="bg-surface-container-lowest shadow-md rounded-2xl p-4 space-y-4">
+        <div class="relative flex items-center">
+          <span class="material-symbols-outlined absolute left-4 text-outline">search</span>
+          <input
+            class="w-full pl-12 pr-4 py-3 rounded-xl border-1.5 border-outline-variant focus:border-primary focus:ring-0 text-body-md bg-surface-bright"
+            placeholder="Search for schemes (e.g. PM-Kisan)" type="text" />
+        </div>
+        <div class="flex gap-2 overflow-x-auto hide-scrollbar -mx-2 px-2">
+          <button
+            class="whitespace-nowrap px-4 py-2 rounded-full bg-primary text-on-primary font-label-lg shadow-sm">All</button>
+          <button
+            class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg hover:bg-primary/10 transition-colors">Central</button>
+          <button
+            class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg hover:bg-primary/10 transition-colors">State</button>
+          <button
+            class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg hover:bg-primary/10 transition-colors">Subsidy</button>
+          <button
+            class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg hover:bg-primary/10 transition-colors">Insurance</button>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Schemes -->
+    <section>
+      <div class="px-container-padding flex justify-between items-end mb-4">
+        <h3 class="font-title-lg text-on-surface">Featured Schemes</h3>
+        <button class="text-primary font-label-lg">View All</button>
+      </div>
+      <div class="flex gap-4 overflow-x-auto px-container-padding pb-4 hide-scrollbar">
+        <!-- Card 1 -->
+        <div class="min-w-[280px] bg-white rounded-2xl shadow-md p-5 border border-outline-variant/30">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-on-primary-fixed-variant"
+                style="font-variation-settings: 'FILL' 1;">payments</span>
+            </div>
+            <div>
+              <h4 class="font-label-lg text-on-surface leading-tight">PM-Kisan Samman Nidhi</h4>
+              <span class="text-[10px] uppercase font-bold text-primary tracking-wider">Central Govt</span>
+            </div>
+          </div>
+          <div class="bg-primary/5 rounded-lg p-3 mb-4">
+            <p class="text-label-md text-on-surface-variant">Benefit Amount</p>
+            <p class="font-headline-lg text-primary">₹6000<span class="text-body-md">/year</span></p>
+          </div>
+          <button
+            class="w-full py-2 bg-primary text-on-primary rounded-xl font-label-lg shadow-md active:scale-95 transition-transform">Apply
+            Now</button>
+        </div>
+        <!-- Card 2 -->
+        <div class="min-w-[280px] bg-white rounded-2xl shadow-md p-5 border border-outline-variant/30">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-secondary-fixed rounded-xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-on-secondary-fixed-variant"
+                style="font-variation-settings: 'FILL' 1;">eco</span>
+            </div>
+            <div>
+              <h4 class="font-label-lg text-on-surface leading-tight">Bihar Rajya Fasal Sahayata</h4>
+              <span class="text-[10px] uppercase font-bold text-secondary tracking-wider">Bihar Govt</span>
+            </div>
+          </div>
+          <div class="bg-secondary/5 rounded-lg p-3 mb-4">
+            <p class="text-label-md text-on-surface-variant">Max Compensation</p>
+            <p class="font-headline-lg text-secondary">₹10,000<span class="text-body-md">/ha</span></p>
+          </div>
+          <button
+            class="w-full py-2 bg-primary text-on-primary rounded-xl font-label-lg shadow-md active:scale-95 transition-transform">Apply
+            Now</button>
+        </div>
+      </div>
+    </section>
+    <!-- Latest Announcements -->
+    <section class="px-container-padding">
+      <div
+        class="bg-primary-container text-on-primary-container rounded-2xl p-4 flex items-center gap-4 relative overflow-hidden">
+        <div class="absolute -right-4 -bottom-4 opacity-10">
+          <span class="material-symbols-outlined text-6xl">campaign</span>
+        </div>
+        <div class="bg-white/20 p-2 rounded-full">
+          <span class="material-symbols-outlined">campaign</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="bg-error text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">New</span>
+            <h4 class="font-label-lg">Registration Deadline Extended</h4>
+          </div>
+          <p class="text-sm opacity-90">KCC application date extended to Dec 31, 2023. Apply today to avoid late fees.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Grid of Scheme Cards -->
+    <section class="px-container-padding">
+      <h3 class="font-title-lg text-on-surface mb-4">All Schemes</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter">
+        <!-- Scheme 1 -->
+        <div
+          class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 flex flex-col h-full">
+          <div class="flex justify-between items-start mb-4">
+            <h4 class="font-headline-lg-mobile text-primary">KCC - Kisan Credit Card</h4>
+            <span class="material-symbols-outlined text-primary">credit_score</span>
+          </div>
+          <div class="space-y-4 flex-1">
+            <div>
+              <p class="font-label-md text-outline uppercase tracking-wider mb-1">Eligibility</p>
+              <p class="font-body-md text-on-surface">All land-holding farmers, tenant farmers, and oral lessees.</p>
+            </div>
+            <div>
+              <p class="font-label-md text-outline uppercase tracking-wider mb-1">Key Benefits</p>
+              <ul class="space-y-1">
+                <li class="flex items-start gap-2 text-body-md">
+                  <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                  <span>Loan up to ₹3 Lakh at 4% interest.</span>
+                </li>
+                <li class="flex items-start gap-2 text-body-md">
+                  <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                  <span>Personal accident insurance cover.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="p-3 bg-error-container/20 rounded-xl">
+              <p class="text-error font-label-lg flex items-center gap-2">
+                <span class="material-symbols-outlined text-lg">timer</span>
+                Deadline: 15 Dec 2023
+              </p>
+            </div>
+            <div>
+              <p class="font-label-md text-outline uppercase tracking-wider mb-1">Documents Required</p>
+              <p class="text-sm text-on-surface-variant italic">Aadhar Card, Land Record (LPC), Passport Photo, Bank
+                Passbook.</p>
+            </div>
+          </div>
+          <button
+            class="mt-6 w-full py-4 bg-primary text-on-primary rounded-xl font-label-lg shadow-md hover:bg-primary-container transition-colors">Apply
+            Now</button>
+        </div>
+        <!-- Scheme 2 -->
+        <div
+          class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/30 flex flex-col h-full">
+          <div class="flex justify-between items-start mb-4">
+            <h4 class="font-headline-lg-mobile text-primary">PM Fasal Bima Yojana</h4>
+            <span class="material-symbols-outlined text-primary">security</span>
+          </div>
+          <div class="space-y-4 flex-1">
+            <div>
+              <p class="font-label-md text-outline uppercase tracking-wider mb-1">Eligibility</p>
+              <p class="font-body-md text-on-surface">Farmers growing notified crops in notified areas.</p>
+            </div>
+            <div>
+              <p class="font-label-md text-outline uppercase tracking-wider mb-1">Key Benefits</p>
+              <ul class="space-y-1">
+                <li class="flex items-start gap-2 text-body-md">
+                  <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                  <span>Protection against natural calamities.</span>
+                </li>
+                <li class="flex items-start gap-2 text-body-md">
+                  <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                  <span>Very low premium rates (1.5% - 2%).</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-label-md text-outline uppercase tracking-wider mb-1">Documents Required</p>
+              <p class="text-sm text-on-surface-variant italic">Sowing Certificate, Land Records, Bank Details.</p>
+            </div>
+          </div>
+          <button
+            class="mt-6 w-full py-4 bg-primary text-on-primary rounded-xl font-label-lg shadow-md hover:bg-primary-container transition-colors">Apply
+            Now</button>
+        </div>
+      </div>
+    </section>
+    <!-- Special Sections (Categories) -->
+    <section class="px-container-padding">
+      <h3 class="font-title-lg text-on-surface mb-4">Browse by Category</h3>
+      <div class="grid grid-cols-3 gap-3">
+        <button
+          class="flex flex-col items-center p-4 bg-surface-container rounded-2xl active:scale-95 transition-transform">
+          <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2 shadow-sm text-primary">
+            <span class="material-symbols-outlined">atr</span>
+          </div>
+          <span class="text-xs font-label-lg text-center">Subsidies</span>
+        </button>
+        <button
+          class="flex flex-col items-center p-4 bg-surface-container rounded-2xl active:scale-95 transition-transform">
+          <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2 shadow-sm text-primary">
+            <span class="material-symbols-outlined">account_balance</span>
+          </div>
+          <span class="text-xs font-label-lg text-center">Loans</span>
+        </button>
+        <button
+          class="flex flex-col items-center p-4 bg-surface-container rounded-2xl active:scale-95 transition-transform">
+          <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-2 shadow-sm text-primary">
+            <span class="material-symbols-outlined">shield</span>
+          </div>
+          <span class="text-xs font-label-lg text-center">Insurance</span>
+        </button>
+      </div>
+    </section>
+    <!-- FAQ Accordion -->
+    <section class="px-container-padding">
+      <h3 class="font-title-lg text-on-surface mb-4">Frequently Asked Questions</h3>
+      <div class="space-y-2">
+        <details class="group bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
+          <summary class="flex justify-between items-center p-4 cursor-pointer list-none font-label-lg text-on-surface">
+            How to check PM-Kisan status?
+            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="p-4 pt-0 text-body-md text-on-surface-variant">
+            Go to the official PM-Kisan portal, click on 'Beneficiary Status', enter your Aadhaar number or Account
+            number to view the details of your installments.
+          </div>
+        </details>
+        <details class="group bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
+          <summary class="flex justify-between items-center p-4 cursor-pointer list-none font-label-lg text-on-surface">
+            Documents for Bihar Fasal Sahayata?
+            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="p-4 pt-0 text-body-md text-on-surface-variant">
+            Required documents include: Aadhar card, Land Possession Certificate (LPC) or land rent receipt, Bank
+            Passbook, and a self-declaration certificate.
+          </div>
+        </details>
+      </div>
+    </section>
+    <!-- CTA - Agriculture Officer -->
+    <section class="px-container-padding">
+      <div
+        class="bg-inverse-surface text-inverse-on-surface p-6 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-center md:text-left">
+          <h4 class="font-title-lg mb-1">Need help with applications?</h4>
+          <p class="opacity-80">Our experts can guide you through the process.</p>
+        </div>
+        <a class="flex items-center gap-3 px-8 py-4 bg-primary text-on-primary rounded-full font-label-lg hover:bg-primary-container transition-all shadow-lg active:scale-95"
+          href="tel:1800-123-4567">
+          <span class="material-symbols-outlined">call</span>
+          Talk to Agriculture Officer
+        </a>
+      </div>
+    </section>
+  </main>
+  <!-- Navigation Drawer (Side) - Hidden by default, triggered by JS or left for visual representation -->
+  <div
+    class="hidden fixed inset-y-0 left-0 w-80 z-[60] bg-surface shadow-lg transition-transform duration-300 ease-in-out -translate-x-full"
+    id="sideNav">
+    <div class="p-6 h-full flex flex-col">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container">
+          <img class="w-full h-full object-cover"
+            data-alt="A portrait of a smiling middle-aged Indian farmer wearing a traditional white kurta and a green turban, set against a blurred background of a lush green agricultural field at sunset. The lighting is warm and cinematic, reflecting the premium agricultural partner brand aesthetic."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_2O2DA7JniwBwqL5vokJnto2jrpWXvnECO3WShCXQdkmWnbDixCgbkAUBu0bnwmG3vwfpqkk_6DQ-iQssMz1uueHk-A222fGDTdXpiqo1_7IHPv4QjXH2XvlgH6QGUDbZteME9_JN2Aj-LU_Q5J9i4y6wKU_TVyTU3CooMgP93TumJrr_jUKDZE8ZCj3l31StcxkVkzPIERDkht58M4fMoBWGc06pbJVRUJplxHXKWDtl3xVeIEn0fS8kp8dXG1vuXJL5PIRzGRQ" />
+        </div>
+        <div>
+          <h3 class="font-title-lg text-on-surface">Farmer</h3>
+          <p class="text-sm text-on-surface-variant">Madhepura, Bihar</p>
+        </div>
+      </div>
+      <nav class="space-y-1 flex-1">
+        <a class="flex items-center gap-4 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">agriculture</span>
+          <span class="font-label-lg">My Farm</span>
+        </a>
+        <a class="flex items-center gap-4 px-4 py-3 rounded-xl bg-primary-container text-on-primary-container font-bold"
+          href="#">
+          <span class="material-symbols-outlined">gavel</span>
+          <span class="font-label-lg">Government Schemes</span>
+        </a>
+        <a class="flex items-center gap-4 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">language</span>
+          <span class="font-label-lg">Language Settings</span>
+        </a>
+        <a class="flex items-center gap-4 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">help</span>
+          <span class="font-label-lg">Help Support</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+  <script>
+      (() => {
+        try {
+          const raw = localStorage.getItem('ks_user') || sessionStorage.getItem('ks_user');
+          if (!raw) return;
+          const user = JSON.parse(raw);
+          const name = user && user.name ? String(user.name).trim() : '';
+          if (!name) return;
+          const sideName = document.querySelector('#sideNav h3');
+          if (sideName && sideName.textContent.trim() === 'Farmer') {
+            sideName.textContent = name;
+          }
+        } catch (e) { }
+      })();
+  </script>
+  <!-- Bottom Navigation Bar -->
+  <nav
+    class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-base pb-6 pt-2 bg-surface-container-lowest border-t border-outline-variant shadow-md">
+    <a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"
+      href="#">
+      <span class="material-symbols-outlined">home</span>
+      <span class="font-label-md">Home</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"
+      href="#">
+      <span class="material-symbols-outlined">cloudy</span>
+      <span class="font-label-md">Weather</span>
+    </a>
+    <a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:scale-90 transition-all"
+      href="#">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">gavel</span>
+      <span class="font-label-md">Crops</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"
+      href="#">
+      <span class="material-symbols-outlined">storefront</span>
+      <span class="font-label-md">Mandi</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"
+      href="#">
+      <span class="material-symbols-outlined">person</span>
+      <span class="font-label-md">Profile</span>
+    </a>
+  </nav>
+  <!-- Floating Voice Assistant -->
+  <button
+    class="fixed bottom-24 right-6 w-14 h-14 bg-gradient-to-br from-primary to-secondary text-white rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-transform z-50">
+    <span class="material-symbols-outlined text-3xl">mic</span>
+    <div class="absolute inset-0 rounded-full bg-primary/30 animate-ping"></div>
+  </button>
+  <script>
+    // Micro-interactions and simple state management
+    document.querySelectorAll('details').forEach((el) => {
+      el.addEventListener('toggle', (e) => {
+        if (el.open) {
+          document.querySelectorAll('details').forEach((otherEl) => {
+            if (otherEl !== el) otherEl.open = false;
+          });
+        }
+      });
+    });
+  </script>
+  <script src="/js/shared-location.js"></script>
+  <script src="/js/mic.js"></script>
+</body>
+
+</html>

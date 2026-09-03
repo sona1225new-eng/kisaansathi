@@ -8,6 +8,7 @@ import MandiPrices from './components/MandiPrices'
 import HelpfulLinks from './components/HelpfulLinks'
 import News from './components/News'
 import BottomNavigation from './components/BottomNavigation'
+
 import ApiStatus from './components/ApiStatus'
 import LocationPermissionBanner from './components/LocationPermissionBanner'
 import LocationModal from './components/LocationModal'
@@ -134,7 +135,7 @@ export default function App() {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-bold text-green-700">Kisaan Saathi</h2>
-            
+
             <button
               onClick={openLocationModal}
               className="text-xs bg-green-50 text-green-800 px-2.5 py-1 rounded-lg border border-green-200 font-semibold"
@@ -160,6 +161,7 @@ export default function App() {
           </div>
         </div>
       </div>
+
 
       <BottomNavigation />
     </div>
