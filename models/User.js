@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema({
   resetPasswordExpires: { type: Date, default: undefined },
   phone: { type: String, default: '' },
   location: { type: String, default: 'Madhepura, Bihar' },
+  isVerified: { type: Boolean, default: false },
 
   // Location enrichment
   gpsCoords: {
@@ -42,13 +43,13 @@ const userSchema = new mongoose.Schema({
   updatedAt: { type: Date, default: Date.now },
 });
 
-userSchema.pre('save', async function(next) {
+userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
   this.password = await bcrypt.hash(this.password, 10);
   next();
 });
 
-userSchema.methods.comparePassword = async function(candidatePassword) {
+userSchema.methods.comparePassword = async function (candidatePassword) {
   return bcrypt.compare(candidatePassword, this.password);
 };
 

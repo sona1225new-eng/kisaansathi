@@ -1,26 +1,66 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
+const { memoryUsers } = require('../controllers/authController');
 
 const auth = async (req, res, next) => {
   try {
     const authHeader = req.headers.authorization || '';
-    const token = authHeader.startsWith('Bearer ') ? authHeader.substring(7) : null;
 
-    if (!token) {
-      return res.status(401).json({ success: false, message: 'Authentication required' });
+    if (!authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({
+        success: false,
+        message: 'Authentication required',
+      });
     }
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'dev-secret-key-12345');
-    const user = await User.findById(decoded.id).select('-password');
+    const token = authHeader.substring(7);
 
-    if (!user) {
-      return res.status(401).json({ success: false, message: 'User not found' });
+    const decoded = jwt.verify(
+      token,
+      process.env.JWT_SECRET || 'dev-secret-key-12345'
+    );
+
+    // First try MongoDB
+    try {
+      const user = await User.findById(decoded.id).select('-password');
+
+      if (user) {
+        req.user = user;
+        return next();
+      }
+    } catch (dbError) {
+      console.warn('MongoDB user lookup failed, checking memory user...');
     }
 
-    req.user = user;
-    next();
+    // If MongoDB is unavailable, check in-memory users
+    if (memoryUsers) {
+      const memoryUser = [...memoryUsers.values()].find(
+        (user) => user.id === decoded.id || user._id === decoded.id
+      );
+
+      if (memoryUser) {
+        req.user = {
+          ...memoryUser,
+          _id: memoryUser._id,
+          id: memoryUser.id,
+        };
+
+        return next();
+      }
+    }
+
+    return res.status(401).json({
+      success: false,
+      message: 'User not found',
+    });
+
   } catch (error) {
-    return res.status(401).json({ success: false, message: 'Invalid token' });
+    console.error('Auth middleware error:', error.message);
+
+    return res.status(401).json({
+      success: false,
+      message: 'Invalid token',
+    });
   }
 };
 

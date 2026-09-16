@@ -5,7 +5,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import { useAuthContext } from './context/AuthContext'
 import LandingPage from './pages/LandingPage'
 import MicButton from './components/MicButton'
-import { ForgotPasswordPage, LoginPage, RegisterPage, ResetPasswordPage } from './pages/AuthPages'
+import { ForgotPasswordPage, LoginPage, RegisterPage, ResetPasswordPage, VerifyEmailPage } from './pages/AuthPages'
 
 function HomeRedirect() {
     const { isAuthenticated, ready } = useAuthContext()
@@ -21,6 +21,7 @@ export default function AppRoutes() {
                 <Route path="/" element={<HomeRedirect />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
+                <Route path="/verify-email" element={<VerifyEmailPage />} />
                 <Route path="/forgot-password" element={<ForgotPasswordPage />} />
                 <Route path="/reset-password" element={<ResetPasswordPage />} />
                 <Route element={<ProtectedRoute />}>

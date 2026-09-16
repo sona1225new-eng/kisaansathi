@@ -39,8 +39,10 @@ export function AuthProvider({ children }) {
 
   const register = useCallback(async (values) => {
     const response = await authService.register(values);
-    const data = response.data.data;
-    persist(data, true);
+    const data = response.data?.data || response.data;
+    if (data?.token) {
+      persist(data, true);
+    }
     return data;
   }, [persist]);
 
