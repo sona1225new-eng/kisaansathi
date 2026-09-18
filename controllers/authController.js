@@ -340,6 +340,60 @@ exports.verifyEmail = async (req, res) => {
 };
 
 /**
+ * Handles resending verification email.
+ * Finds the unverified user by email, creates a new 24h verification JWT token,
+ * builds a verification link, and sends the verification email via Resend.
+ */
+exports.resendVerification = async (req, res) => {
+  try {
+    const { email } = req.body;
+    if (!email) {
+      return sendError(res, 'Please provide your email address', 400);
+    }
+
+    const normalizedEmail = String(email).trim().toLowerCase();
+    let user = null;
+
+    if (isDbConnected()) {
+      try {
+        user = await User.findOne({ email: normalizedEmail });
+      } catch (dbErr) {
+        console.warn('MongoDB lookup error in resendVerification:', dbErr.message);
+      }
+    }
+
+    if (!user && memoryUsers.has(normalizedEmail)) {
+      user = memoryUsers.get(normalizedEmail);
+    }
+
+    if (!user) {
+      return sendError(res, 'No account found with this email address.', 404);
+    }
+
+    if (user.isVerified) {
+      return sendError(res, 'This account is already verified. You can log in directly.', 400);
+    }
+
+    const verificationToken = createVerificationToken(normalizedEmail);
+    const verifyLink = `${getBaseAppUrl()}/api/auth/verify-email?token=${verificationToken}`;
+
+    const emailResult = await sendVerificationEmail(normalizedEmail, verifyLink);
+
+    if (!emailResult.success) {
+      return sendError(res, emailResult.error || 'Failed to send verification email. Please try again.', 500);
+    }
+
+    return sendSuccess(res, {
+      message: 'Verification email sent! Check your inbox.',
+      emailDelivery: 'sent',
+    });
+  } catch (error) {
+    console.error('Resend verification error:', error);
+    return sendError(res, error.message || 'Failed to resend verification email.', 500);
+  }
+};
+
+/**
  * Handles user login.
  * Validates credentials and verifies that the account is email-verified (isVerified === true).
  */

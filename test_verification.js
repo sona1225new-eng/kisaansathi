@@ -183,7 +183,48 @@ const runTests = async () => {
     }
     console.log('   ✅ Demo account login works seamlessly.\n');
 
-    console.log('🎉 ALL 8 TESTS PASSED SUCCESSFULLY!');
+    // Test 9: Resend Verification Email for Unverified Account
+    console.log('9️⃣ Testing POST /api/auth/resend-verification for unverified account...');
+    const unverifiedUserEmail = `resend_tester_${Date.now()}@test.com`;
+    await makeRequest('POST', '/api/auth/signup', {
+      name: 'Resend Test Farmer',
+      email: unverifiedUserEmail,
+      password: 'password123',
+    });
+
+    const resendSuccessRes = await makeRequest('POST', '/api/auth/resend-verification', {
+      email: unverifiedUserEmail,
+    });
+    console.log('   Resend Status:', resendSuccessRes.statusCode);
+    console.log('   Resend Response:', resendSuccessRes.body);
+    if (resendSuccessRes.statusCode !== 200) {
+      throw new Error(`Expected 200 OK for resend-verification, got ${resendSuccessRes.statusCode}`);
+    }
+    if (!resendSuccessRes.body.data?.message?.toLowerCase().includes('verification email sent')) {
+      throw new Error(`Expected success message in response, got: ${JSON.stringify(resendSuccessRes.body)}`);
+    }
+    console.log('   ✅ Resend verification email sent successfully.\n');
+
+    // Test 10: Resend Verification for Non-existent and Already Verified Accounts
+    console.log('🔟 Testing POST /api/auth/resend-verification error handling...');
+    const resendNotFoundRes = await makeRequest('POST', '/api/auth/resend-verification', {
+      email: 'nonexistent_user_999@test.com',
+    });
+    console.log('   Non-existent email status:', resendNotFoundRes.statusCode);
+    if (resendNotFoundRes.statusCode !== 404) {
+      throw new Error(`Expected 404 for non-existent email, got ${resendNotFoundRes.statusCode}`);
+    }
+
+    const resendAlreadyVerifiedRes = await makeRequest('POST', '/api/auth/resend-verification', {
+      email: 'ramesh@kisaansaathi.in',
+    });
+    console.log('   Already verified email status:', resendAlreadyVerifiedRes.statusCode);
+    if (resendAlreadyVerifiedRes.statusCode !== 400) {
+      throw new Error(`Expected 400 for already verified email, got ${resendAlreadyVerifiedRes.statusCode}`);
+    }
+    console.log('   ✅ Resend verification error handling works correctly.\n');
+
+    console.log('🎉 ALL 10 TESTS PASSED SUCCESSFULLY!');
   } finally {
     server.close();
   }

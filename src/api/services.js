@@ -1,4 +1,6 @@
-import api from './client';
+import api, { locationService } from './client';
+
+export { locationService };
 
 export const authService = {
   signup: (payload) => api.post('/auth/signup', payload),
@@ -8,6 +10,7 @@ export const authService = {
   logout: () => api.post('/auth/logout'),
   forgotPassword: (payload) => api.post('/auth/forgot-password', payload),
   resetPassword: (payload) => api.post('/auth/reset-password', payload),
+  resendVerification: (payload) => api.post('/auth/resend-verification', payload),
 };
 
 export const userService = {
